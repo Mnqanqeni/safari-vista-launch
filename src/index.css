@@ -2,121 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Safari-inspired design system with warm earth tones and adventure feel.
+/* Safari Tour Company Design System
+Earth-tone color palette: Safari brown (#8B4513), safari green (#228B22), safari gold (#DAA520), safari cream (#F5F5DC)
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Safari Earth Tones */
-    --background: 28 15% 97%;
-    --foreground: 20 14% 12%;
+    /* Safari Earth-tone color palette */
+    --background: 45 35% 96%;
+    --foreground: 30 25% 15%;
 
-    --card: 28 25% 95%;
-    --card-foreground: 20 14% 12%;
+    --card: 45 25% 98%;
+    --card-foreground: 30 25% 15%;
 
-    --popover: 28 25% 95%;
-    --popover-foreground: 20 14% 12%;
+    --popover: 45 25% 98%;
+    --popover-foreground: 30 25% 15%;
 
-    /* Safari Gold - primary brand color */
-    --primary: 45 85% 47%;
-    --primary-foreground: 28 15% 97%;
-    --primary-glow: 45 95% 65%;
+    /* Safari Brown - primary brand color */
+    --primary: 25 55% 27%;
+    --primary-foreground: 45 35% 96%;
 
-    /* Safari Green - secondary accent */
-    --secondary: 120 25% 35%;
-    --secondary-foreground: 28 15% 97%;
+    /* Safari Green - adventure theme */
+    --secondary: 120 55% 27%;
+    --secondary-foreground: 45 35% 96%;
 
-    /* Earth Brown - muted tones */
-    --muted: 28 20% 88%;
-    --muted-foreground: 20 12% 45%;
+    /* Safari Gold - premium accents */
+    --accent: 43 75% 49%;
+    --accent-foreground: 30 25% 15%;
 
-    /* Warm accent colors */
-    --accent: 35 65% 65%;
-    --accent-foreground: 20 14% 12%;
+    /* Safari Cream - soft backgrounds */
+    --muted: 60 20% 93%;
+    --muted-foreground: 30 15% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 28 15% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 35% 96%;
 
-    --border: 28 15% 85%;
-    --input: 28 15% 92%;
-    --ring: 45 85% 47%;
+    --border: 30 15% 85%;
+    --input: 30 15% 90%;
+    --ring: 25 55% 27%;
 
     /* Safari-specific design tokens */
-    --safari-bronze: 30 45% 25%;
-    --safari-copper: 25 55% 45%;
-    --safari-sage: 95 20% 45%;
-    --safari-cream: 45 35% 92%;
+    --safari-brown: 25 55% 27%;
+    --safari-green: 120 55% 27%;
+    --safari-gold: 43 75% 49%;
+    --safari-cream: 60 20% 93%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(45 75% 35%), hsl(120 35% 25%));
-    --gradient-card: linear-gradient(145deg, hsl(28 25% 95%), hsl(28 15% 92%));
-    --gradient-golden: linear-gradient(135deg, hsl(45 85% 47%), hsl(45 95% 65%));
+    /* Custom gradients */
+    --gradient-earth: linear-gradient(135deg, hsl(25 55% 27%), hsl(30 45% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 55% 27% / 0.8), hsl(120 55% 27% / 0.8));
+    --gradient-sunset: linear-gradient(135deg, hsl(43 75% 49%), hsl(30 65% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(45 25% 98%), hsl(45 20% 95%));
     
-    /* Shadows */
-    --shadow-safari: 0 8px 32px hsl(20 14% 12% / 0.1);
-    --shadow-card: 0 4px 16px hsl(20 14% 12% / 0.08);
-    --shadow-button: 0 4px 12px hsl(45 85% 47% / 0.25);
+    /* Safari shadows */
+    --shadow-safari: 0 10px 30px hsl(30 25% 15% / 0.12);
+    --shadow-card: 0 6px 20px hsl(30 25% 15% / 0.08);
+    --shadow-button: 0 4px 15px hsl(25 55% 27% / 0.3);
+    --shadow-gold: 0 4px 15px hsl(43 75% 49% / 0.3);
     
-    /* Animations */
+    /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bouncy: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 45 25% 98%;
+    --sidebar-foreground: 30 25% 15%;
+    --sidebar-primary: 25 55% 27%;
+    --sidebar-primary-foreground: 45 35% 96%;
+    --sidebar-accent: 60 20% 93%;
+    --sidebar-accent-foreground: 30 25% 15%;
+    --sidebar-border: 30 15% 85%;
+    --sidebar-ring: 25 55% 27%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 15% 8%;
+    --foreground: 45 35% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 20% 12%;
+    --card-foreground: 45 35% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 20% 12%;
+    --popover-foreground: 45 35% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 43 75% 55%;
+    --primary-foreground: 25 15% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 120 40% 35%;
+    --secondary-foreground: 45 35% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 15% 15%;
+    --muted-foreground: 45 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 43 65% 45%;
+    --accent-foreground: 45 35% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 45 35% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 25 15% 20%;
+    --input: 25 15% 18%;
+    --ring: 43 75% 55%;
+
+    --safari-brown: 25 45% 35%;
+    --safari-green: 120 45% 35%;
+    --safari-gold: 43 75% 55%;
+    --safari-cream: 25 15% 15%;
+
+    --sidebar-background: 25 15% 8%;
+    --sidebar-foreground: 45 35% 95%;
+    --sidebar-primary: 43 75% 55%;
+    --sidebar-primary-foreground: 25 15% 8%;
+    --sidebar-accent: 25 15% 15%;
+    --sidebar-accent-foreground: 45 35% 95%;
+    --sidebar-border: 25 15% 20%;
+    --sidebar-ring: 43 75% 55%;
   }
 }
 

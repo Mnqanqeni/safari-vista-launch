@@ -13,24 +13,24 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-golden rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">SA</span>
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 bg-gradient-sunset rounded-full flex items-center justify-center shadow-gold">
+              <span className="text-white font-bold text-xl">SA</span>
             </div>
-            <span className="text-xl font-bold text-foreground">Safari Adventures</span>
+            <span className="text-2xl font-bold text-foreground">Safari Adventures</span>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-10">
             {menuItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-lg relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-safari-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {item.label}
               </a>
@@ -39,36 +39,36 @@ const Header = () => {
           
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" size="sm">
+            <Button variant="golden" size="lg" className="text-lg px-6">
               Book Now
             </Button>
           </div>
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground hover:text-safari-gold transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-sm">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden py-6 border-t border-border bg-white/98 backdrop-blur-sm">
+            <nav className="flex flex-col space-y-6">
               {menuItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium px-4 py-2"
+                  className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-lg px-4 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="px-4 pt-2">
-                <Button variant="default" size="sm" className="w-full">
+              <div className="px-4 pt-4">
+                <Button variant="golden" size="lg" className="w-full text-lg">
                   Book Now
                 </Button>
               </div>

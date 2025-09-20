@@ -1,56 +1,55 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Users, Award, Heart } from "lucide-react";
+import { Users, Award, Leaf, Heart } from "lucide-react";
 
 const features = [
   {
-    icon: Shield,
-    title: "Safety First",
-    description: "Professional guides with extensive wilderness training ensure your safety throughout the journey."
-  },
-  {
     icon: Users,
     title: "Expert Guides",
-    description: "Local experts with decades of experience and deep knowledge of wildlife behavior and conservation."
+    description: "Professional safari guides with 15+ years experience and deep knowledge of wildlife behavior, ensuring safe and educational adventures."
   },
   {
     icon: Award,
-    title: "Award-Winning",
-    description: "Recognized for excellence in sustainable tourism and unforgettable safari experiences."
+    title: "Small Groups",
+    description: "Intimate group sizes of maximum 8 guests per vehicle for personalized attention and better wildlife viewing opportunities."
+  },
+  {
+    icon: Leaf,
+    title: "Sustainable Tourism",
+    description: "Committed to responsible tourism practices that support local communities and contribute to wildlife conservation efforts."
   },
   {
     icon: Heart,
-    title: "Conservation Focus",
-    description: "Supporting local communities and wildlife conservation through responsible tourism practices."
+    title: "Unforgettable Memories",
+    description: "Creating once-in-a-lifetime experiences with luxury accommodations, gourmet dining, and exclusive wildlife encounters."
   }
 ];
 
 const About = () => {
   return (
-    <section className="py-20 bg-safari-cream">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Why Choose Safari Adventures
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              With over 20 years of experience, we've crafted the perfect blend of adventure, 
-              comfort, and authenticity. Our commitment to sustainable tourism ensures that your 
-              safari experience contributes to wildlife conservation and local communities.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              With over 20 years of experience crafting exceptional safari adventures, we've perfected the art of 
+              connecting travelers with Africa's incredible wildlife while ensuring every detail exceeds expectations.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {features.map((feature, index) => (
               <Card 
                 key={feature.title} 
-                className="text-center group hover:shadow-card transition-all duration-300 bg-card border-0"
+                className="text-center group hover:shadow-card transition-all duration-300 bg-gradient-card border-0 transform hover:-translate-y-2"
               >
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8" />
+                <CardContent className="p-8">
+                  <div className="w-20 h-20 bg-safari-brown text-white rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-button">
+                    <feature.icon className="w-10 h-10" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">
+                  <h3 className="text-xl font-bold text-foreground mb-4">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -61,40 +60,44 @@ const About = () => {
             ))}
           </div>
           
-          <div className="bg-gradient-card rounded-2xl p-8 md:p-12 shadow-safari">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="bg-gradient-sunset rounded-3xl p-8 md:p-12 shadow-safari text-white">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-foreground mb-4">
-                  Our Mission
+                <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                  Our Safari Legacy
                 </h3>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  To provide transformative safari experiences that connect people with Africa's 
-                  incredible wildlife while supporting conservation efforts and local communities. 
-                  Every tour contributes to protecting the habitats and species you'll encounter.
+                <p className="text-lg leading-relaxed mb-8 text-white/90">
+                  Founded in 2003, Safari Adventures has been at the forefront of responsible wildlife tourism in Africa. 
+                  Our mission is to provide transformative safari experiences that foster deep connections with nature while 
+                  supporting conservation initiatives and empowering local communities across the continent.
                 </p>
-                <div className="flex items-center space-x-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">500+</div>
-                    <div className="text-sm text-muted-foreground">Happy Travelers</div>
+                <div className="grid grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-4xl md:text-5xl font-bold mb-2">20+</div>
+                    <div className="text-sm opacity-90">Years Experience</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">20+</div>
-                    <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div>
+                    <div className="text-4xl md:text-5xl font-bold mb-2">10K+</div>
+                    <div className="text-sm opacity-90">Happy Travelers</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-1">15</div>
-                    <div className="text-sm text-muted-foreground">Conservation Projects</div>
+                  <div>
+                    <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
+                    <div className="text-sm opacity-90">Conservation Projects</div>
                   </div>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-primary rounded-2xl p-6 text-primary-foreground">
-                  <blockquote className="text-lg font-medium mb-4">
-                    "The most incredible wildlife experience of our lives. The guides were 
-                    knowledgeable, the accommodations perfect, and seeing the Big Five in 
-                    their natural habitat was absolutely magical."
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <blockquote className="text-lg md:text-xl font-medium mb-6 italic">
+                    "Safari Adventures didn't just show us wildlife - they connected us to the soul of Africa. 
+                    The guides were incredible storytellers, and every moment felt like a National Geographic documentary come to life."
                   </blockquote>
-                  <cite className="text-primary-glow font-semibold">- Sarah & Michael, UK</cite>
+                  <cite className="text-safari-gold font-semibold text-lg">- Emma & David Thompson, Australia</cite>
+                  <div className="flex mt-4">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-safari-gold text-xl">★</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
