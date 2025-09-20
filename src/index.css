@@ -2,39 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Safari-inspired design system with warm earth tones and adventure feel.
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Safari Earth Tones */
+    --background: 28 15% 97%;
+    --foreground: 20 14% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 28 25% 95%;
+    --card-foreground: 20 14% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 28 25% 95%;
+    --popover-foreground: 20 14% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Safari Gold - primary brand color */
+    --primary: 45 85% 47%;
+    --primary-foreground: 28 15% 97%;
+    --primary-glow: 45 95% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Safari Green - secondary accent */
+    --secondary: 120 25% 35%;
+    --secondary-foreground: 28 15% 97%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Earth Brown - muted tones */
+    --muted: 28 20% 88%;
+    --muted-foreground: 20 12% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm accent colors */
+    --accent: 35 65% 65%;
+    --accent-foreground: 20 14% 12%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 28 15% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 28 15% 85%;
+    --input: 28 15% 92%;
+    --ring: 45 85% 47%;
+
+    /* Safari-specific design tokens */
+    --safari-bronze: 30 45% 25%;
+    --safari-copper: 25 55% 45%;
+    --safari-sage: 95 20% 45%;
+    --safari-cream: 45 35% 92%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(45 75% 35%), hsl(120 35% 25%));
+    --gradient-card: linear-gradient(145deg, hsl(28 25% 95%), hsl(28 15% 92%));
+    --gradient-golden: linear-gradient(135deg, hsl(45 85% 47%), hsl(45 95% 65%));
+    
+    /* Shadows */
+    --shadow-safari: 0 8px 32px hsl(20 14% 12% / 0.1);
+    --shadow-card: 0 4px 16px hsl(20 14% 12% / 0.08);
+    --shadow-button: 0 4px 12px hsl(45 85% 47% / 0.25);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bouncy: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
