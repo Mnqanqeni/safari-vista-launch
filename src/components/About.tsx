@@ -4,23 +4,23 @@ import { Users, Award, Leaf, Heart } from "lucide-react";
 const features = [
   {
     icon: Users,
-    title: "Expert Guides",
-    description: "Professional safari guides with 15+ years experience and deep knowledge of wildlife behavior, ensuring safe and educational adventures."
+    title: "Expert Adventure Guide",
+    description: "Steve's extensive knowledge of the Garden Route ensures you experience the best hidden gems, local insights, and safe adventure guidance."
   },
   {
     icon: Award,
-    title: "Small Groups",
-    description: "Intimate group sizes of maximum 8 guests per vehicle for personalized attention and better wildlife viewing opportunities."
+    title: "Small Group Adventures",
+    description: "Minimum 3 people ensures intimate experiences with better group pricing for 4+ adventurers, creating lasting friendships."
   },
   {
     icon: Leaf,
-    title: "Sustainable Tourism",
-    description: "Committed to responsible tourism practices that support local communities and contribute to wildlife conservation efforts."
+    title: "Complete Adventure Package",
+    description: "From caves to wildlife encounters, kayaking to safaris - experience the full Garden Route adventure in just 3 action-packed days."
   },
   {
     icon: Heart,
     title: "Unforgettable Memories",
-    description: "Creating once-in-a-lifetime experiences with luxury accommodations, gourmet dining, and exclusive wildlife encounters."
+    description: "Create lasting memories with our carefully crafted itinerary featuring South Africa's most spectacular coastal landscapes and wildlife."
   }
 ];
 
@@ -29,15 +29,15 @@ const About = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Why Choose Safari Adventures
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              With over 20 years of experience crafting exceptional safari adventures, we've perfected the art of 
-              connecting travelers with Africa's incredible wildlife while ensuring every detail exceeds expectations.
-            </p>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Why Choose Garden Route Adventures
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Experience the ultimate Garden Route adventure with Steve's expert guidance. Our 3-day epic tour 
+            combines spectacular landscapes, thrilling activities, and unforgettable encounters along South Africa's most beautiful coastline.
+          </p>
+        </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {features.map((feature, index) => (
@@ -64,35 +64,35 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl md:text-4xl font-bold mb-6">
-                  Our Safari Legacy
+                  Our Adventure Story
                 </h3>
                 <p className="text-lg leading-relaxed mb-8 text-white/90">
-                  Founded in 2003, Safari Adventures has been at the forefront of responsible wildlife tourism in Africa. 
-                  Our mission is to provide transformative safari experiences that foster deep connections with nature while 
-                  supporting conservation initiatives and empowering local communities across the continent.
+                  Garden Route Adventures specializes in creating epic 3-day journeys along South Africa's stunning coastline. 
+                  Our mission is to provide transformative adventure experiences that showcase the Garden Route's incredible diversity - 
+                  from underground cave systems to thrilling wildlife encounters and pristine coastal forests.
                 </p>
                 <div className="grid grid-cols-3 gap-6 text-center">
                   <div>
-                    <div className="text-4xl md:text-5xl font-bold mb-2">20+</div>
-                    <div className="text-sm opacity-90">Years Experience</div>
+                    <div className="text-4xl md:text-5xl font-bold mb-2">3</div>
+                    <div className="text-sm opacity-90">Days Epic Adventure</div>
                   </div>
                   <div>
-                    <div className="text-4xl md:text-5xl font-bold mb-2">10K+</div>
-                    <div className="text-sm opacity-90">Happy Travelers</div>
+                    <div className="text-4xl md:text-5xl font-bold mb-2">6+</div>
+                    <div className="text-sm opacity-90">Amazing Activities</div>
                   </div>
                   <div>
-                    <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
-                    <div className="text-sm opacity-90">Conservation Projects</div>
+                    <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
+                    <div className="text-sm opacity-90">Unforgettable Experience</div>
                   </div>
                 </div>
               </div>
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <blockquote className="text-lg md:text-xl font-medium mb-6 italic">
-                    "Safari Adventures didn't just show us wildlife - they connected us to the soul of Africa. 
-                    The guides were incredible storytellers, and every moment felt like a National Geographic documentary come to life."
+                    "Steve's Garden Route adventure was absolutely incredible! From exploring the magnificent Cango Caves to the thrilling 
+                    elephant encounter and game drive - every moment was perfectly planned. The 3 days felt like a lifetime of memories!"
                   </blockquote>
-                  <cite className="text-safari-gold font-semibold text-lg">- Emma & David Thompson, Australia</cite>
+                  <cite className="text-safari-gold font-semibold text-lg">- Sarah & Mike Johnson, Cape Town</cite>
                   <div className="flex mt-4">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-safari-gold text-xl">★</span>

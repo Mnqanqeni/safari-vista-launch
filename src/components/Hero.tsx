@@ -15,13 +15,13 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
-          Discover Your 
-          <span className="block text-safari-gold">Safari Adventure</span>
+          Garden Route 
+          <span className="block text-safari-gold">Epic Adventure</span>
         </h1>
         
         <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
-          Experience the untamed beauty of Africa through our expertly guided safari tours. 
-          Witness the Big Five in their natural habitat and create memories that will last a lifetime.
+          Experience South Africa's stunning Garden Route on our 3-day epic adventure. 
+          From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">

@@ -6,25 +6,25 @@ import okavangoDeltaImage from "@/assets/okavango-delta.jpg";
 
 const destinations = [
   {
-    name: "Kruger National Park",
-    location: "South Africa",
-    description: "Home to the legendary Big Five, Kruger offers unparalleled wildlife viewing opportunities across diverse ecosystems spanning nearly 2 million hectares.",
+    name: "Cango Caves",
+    location: "Oudtshoorn",
+    description: "Explore the magnificent limestone formations in one of South Africa's finest cave systems, featuring spectacular chambers and underground wonders.",
     image: krugerImage,
-    highlights: ["Big Five", "Ancient Baobab Trees", "Bird Paradise", "Night Drives"]
+    highlights: ["Underground Wonders", "Limestone Formations", "Cave Tours", "Adventure Tours"]
   },
   {
-    name: "Serengeti", 
-    location: "Tanzania",
-    description: "Witness the Great Migration and experience the endless plains where millions of animals roam freely in one of Africa's most iconic landscapes.",
+    name: "Tsitsikamma National Park", 
+    location: "Garden Route",
+    description: "Hike the spectacular Storms River Mouth trail and experience pristine coastal forest with suspension bridges and breathtaking ocean views.",
     image: serengetiImage,
-    highlights: ["Great Migration", "Endless Plains", "Predator Action", "Hot Air Balloons"]
+    highlights: ["Forest Trails", "River Mouth", "Suspension Bridge", "Coastal Views"]
   },
   {
-    name: "Okavango Delta",
-    location: "Botswana", 
-    description: "Explore pristine wetlands teeming with wildlife in one of Africa's last remaining wilderness areas, accessible only by traditional mokoro canoes.",
+    name: "Botlierskop Game Reserve",
+    location: "Mossel Bay", 
+    description: "Experience thrilling safari game drives in this private reserve along the Garden Route, home to diverse wildlife and conservation efforts.",
     image: okavangoDeltaImage,
-    highlights: ["Water Safari", "Mokoro Canoes", "Pristine Wilderness", "Unique Ecosystem"]
+    highlights: ["Game Drives", "Wildlife Safari", "Private Reserve", "Conservation"]
   }
 ];
 
@@ -34,10 +34,10 @@ const LocationsShowcase = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Featured Safari Destinations
+            Garden Route Adventure Highlights
           </h2>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Discover breathtaking landscapes and incredible wildlife across Africa's most iconic national parks
+            Discover the most spectacular destinations along South Africa's Garden Route with caves, wildlife, and coastal adventures
           </p>
         </div>
         

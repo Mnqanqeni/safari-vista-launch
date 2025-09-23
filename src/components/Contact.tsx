@@ -9,15 +9,15 @@ const Contact = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Start Your Safari Journey
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Ready to embark on the adventure of a lifetime? Get in touch with our safari experts 
-              to plan your perfect African safari experience tailored to your dreams.
-            </p>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Contact Garden Route Adventures
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Ready to embark on your Garden Route epic adventure? Contact Steve to book your 
+            unforgettable 3-day journey along South Africa's spectacular coastline.
+          </p>
+        </div>
           
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
@@ -67,10 +67,9 @@ const Contact = () => {
                   </label>
                   <select className="w-full p-3 h-12 rounded-md border border-input bg-background text-foreground text-base focus:ring-2 focus:ring-ring focus:border-transparent">
                     <option>Select a package</option>
-                    <option>Classic Safari (5 Days - $2,499)</option>
-                    <option>Premium Safari (7 Days - $4,299)</option>
-                    <option>Ultimate Expedition (10 Days - $7,999)</option>
-                    <option>Custom Safari Experience</option>
+                    <option>Garden Route Epic Adventure (3 Days - R5,000)</option>
+                    <option>Group Adventure 4+ People (3 Days - R4,700)</option>
+                    <option>Custom Garden Route Experience</option>
                   </select>
                 </div>
                 
@@ -98,67 +97,67 @@ const Contact = () => {
                     Get In Touch
                   </h3>
                   
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
-                        <Phone className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground text-lg">Phone</p>
-                        <p className="text-muted-foreground text-base">+27 11 123 4567</p>
-                      </div>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
+                      <Phone className="w-7 h-7" />
                     </div>
-                    
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
-                        <Mail className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground text-lg">Email</p>
-                        <p className="text-muted-foreground text-base">hello@safariadventures.com</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
-                        <MapPin className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground text-lg">Office</p>
-                        <p className="text-muted-foreground text-base">Johannesburg, South Africa</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
-                        <Clock className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground text-lg">Office Hours</p>
-                        <p className="text-muted-foreground text-base">Mon-Fri: 8AM-6PM (SAST)</p>
-                      </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-lg">Call/WhatsApp Steve</p>
+                      <p className="text-muted-foreground text-base">+27 74 990 9229</p>
                     </div>
                   </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
+                      <Mail className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-lg">Email Steve</p>
+                      <p className="text-muted-foreground text-base">stevemwampale@gmail.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
+                      <MapPin className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-lg">Departure Point</p>
+                      <p className="text-muted-foreground text-base">Cape Town (4:40 AM)</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-safari-brown text-white rounded-full flex items-center justify-center shadow-button">
+                      <Clock className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-lg">Tour Duration</p>
+                      <p className="text-muted-foreground text-base">3 Days Epic Adventure</p>
+                    </div>
+                  </div>
+                </div>
                 </CardContent>
               </Card>
               
               <Card className="bg-gradient-sunset border-0 shadow-gold text-white">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <MessageSquare className="w-8 h-8" />
-                    WhatsApp Quick Response
-                  </h3>
-                  <p className="text-lg mb-6 text-white/90">
-                    Get instant answers to your safari questions! Our WhatsApp support is available 
-                    24/7 for quick responses and immediate assistance.
-                  </p>
-                  <Button 
-                    variant="hero-outline" 
-                    size="lg" 
-                    className="w-full text-lg py-4 h-auto border-white text-white hover:bg-white hover:text-safari-brown"
-                  >
-                    Chat on WhatsApp
-                  </Button>
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                  <MessageSquare className="w-8 h-8" />
+                  WhatsApp Quick Booking
+                </h3>
+                <p className="text-lg mb-6 text-white/90">
+                  Contact Steve directly on WhatsApp for instant booking and Garden Route adventure details! 
+                  Quick responses and immediate assistance available.
+                </p>
+                <Button 
+                  variant="hero-outline" 
+                  size="lg" 
+                  className="w-full text-lg py-4 h-auto border-white text-white hover:bg-white hover:text-safari-brown"
+                >
+                  WhatsApp +27 74 990 9229
+                </Button>
                 </CardContent>
               </Card>
               

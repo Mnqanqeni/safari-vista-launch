@@ -4,59 +4,40 @@ import { Check, Star, Crown } from "lucide-react";
 
 const packages = [
   {
-    name: "Classic Safari",
-    price: "2,499",
-    duration: "5 Days",
-    description: "Perfect introduction to African wildlife with comfortable accommodations and essential safari experiences",
+    name: "Garden Route Epic Adventure",
+    price: "5,000",
+    duration: "3 Days",
+    description: "The complete Garden Route experience with caves, wildlife, and adventure activities",
+    currency: "R",
+    minPeople: "3 people minimum",
     features: [
-      "Kruger National Park game drives",
-      "4-star safari lodge accommodation",
-      "All meals and beverages included",
-      "Professional safari guide",
-      "Airport transfers included",
-      "Wildlife photography workshops",
-      "Cultural village visit",
-      "Comprehensive travel insurance"
-    ],
-    popular: false
-  },
-  {
-    name: "Premium Safari",
-    price: "4,299",
-    duration: "7 Days",
-    description: "Enhanced safari experience with luxury amenities and exclusive wildlife encounters",
-    features: [
-      "Multi-park safari adventure",
-      "5-star luxury safari lodge",
-      "Gourmet dining experiences",
-      "Private game drive vehicles",
-      "Bush dinner under the stars",
-      "Hot air balloon safari",
-      "Spa treatments included",
-      "Professional photography guide",
-      "Exclusive conservation experience",
-      "Premium travel insurance"
+      "Route 62 scenic drive",
+      "Cango Caves exploration tour",
+      "Elephant encounter at Buffelsdrif",
+      "Kaaimans River kayaking adventure",
+      "Game drive at Botlierskop Private Reserve",
+      "2-night chalet accommodation in Tsitsikamma",
+      "Storms River Mouth hiking trail",
+      "Departure 4:40 AM from Cape Town"
     ],
     popular: true
   },
   {
-    name: "Ultimate Expedition",
-    price: "7,999",
-    duration: "10 Days",
-    description: "The complete African safari experience with ultra-luxury service and exclusive access",
+    name: "Group Adventure",
+    price: "4,700",
+    duration: "3 Days",
+    description: "Special pricing for groups of 4 or more people - same epic adventure at a better rate",
+    currency: "R",
+    minPeople: "4+ people",
     features: [
-      "Three iconic parks expedition",
-      "Ultra-luxury safari camps",
-      "Private chef and butler service",
-      "Helicopter safari transfers",
-      "Exclusive wildlife tracking",
-      "Private conservation project visit",
-      "Customized daily itineraries",
-      "24/7 concierge service",
-      "Professional wildlife photographer",
-      "Private airstrip access",
-      "Luxury spa experiences",
-      "Premium travel insurance"
+      "Route 62 scenic drive",
+      "Cango Caves exploration tour",
+      "Elephant encounter at Buffelsdrif",
+      "Kaaimans River kayaking adventure",
+      "Game drive at Botlierskop Private Reserve",
+      "2-night chalet accommodation in Tsitsikamma",
+      "Storms River Mouth hiking trail",
+      "Departure 4:40 AM from Cape Town"
     ],
     popular: false
   }
@@ -68,15 +49,15 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Safari Tour Packages
+            Garden Route Tour Packages
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Choose from our carefully crafted safari experiences, each designed to offer 
-            unforgettable encounters with Africa's incredible wildlife and breathtaking landscapes
+            Experience the ultimate Garden Route adventure with our epic 3-day tour packages,
+            featuring caves, wildlife encounters, and breathtaking coastal landscapes
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
           {packages.map((pkg, index) => (
             <Card 
               key={pkg.name}
@@ -102,11 +83,16 @@ const Pricing = () => {
                 </CardTitle>
                 <div className="mb-6">
                   <span className="text-5xl md:text-6xl font-bold text-safari-brown">
-                    ${pkg.price}
+                    {pkg.currency || "R"}{pkg.price}
                   </span>
                   <span className="text-muted-foreground text-xl ml-3">
                     / {pkg.duration}
                   </span>
+                  {pkg.minPeople && (
+                    <div className="text-sm text-muted-foreground mt-2">
+                      {pkg.minPeople}
+                    </div>
+                  )}
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg px-4">
                   {pkg.description}
@@ -136,21 +122,21 @@ const Pricing = () => {
         </div>
         
         <div className="text-center bg-white rounded-2xl p-8 shadow-card max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-foreground mb-4">Need a Custom Safari Experience?</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-4">Important Booking Information</h3>
           <p className="text-muted-foreground mb-6 text-lg">
-            Our safari experts can create a personalized itinerary tailored to your specific interests, 
-            budget, and travel dates. Contact us for a custom quote.
+            Prices exclude meals, drinks, and optional activities like bungy jumping. 
+            A minimum of 3 people is required for the tour to proceed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" className="text-lg px-8">
-              Request Custom Quote
+              Contact Steve Now
             </Button>
             <Button variant="default" size="lg" className="text-lg px-8">
-              Compare All Packages
+              Book Your Adventure
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-6">
-            All packages include airport transfers, park fees, and comprehensive travel insurance
+            Departure at 4:40 AM from Cape Town • Confirmation email provided after booking
           </p>
         </div>
       </div>
