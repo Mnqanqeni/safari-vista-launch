@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Contact Garden Route Adventures
+            Contact La Family Tour
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Ready to embark on your Garden Route epic adventure? Contact Steve to book your 

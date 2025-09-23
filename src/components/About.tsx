@@ -31,7 +31,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Why Choose Garden Route Adventures
+            Why Choose La Family Tour
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Experience the ultimate Garden Route adventure with Steve's expert guidance. Our 3-day epic tour 
@@ -67,7 +67,7 @@ const About = () => {
                   Our Adventure Story
                 </h3>
                 <p className="text-lg leading-relaxed mb-8 text-white/90">
-                  Garden Route Adventures specializes in creating epic 3-day journeys along South Africa's stunning coastline. 
+                  La Family Tour specializes in creating epic 3-day journeys along South Africa's stunning coastline. 
                   Our mission is to provide transformative adventure experiences that showcase the Garden Route's incredible diversity - 
                   from underground cave systems to thrilling wildlife encounters and pristine coastal forests.
                 </p>

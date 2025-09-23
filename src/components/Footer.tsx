@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-safari-gold rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">GR</span>
+                <span className="text-white font-bold text-xl">LF</span>
               </div>
-              <span className="text-2xl font-bold">Garden Route Adventures</span>
+              <span className="text-2xl font-bold">La Family Tour</span>
             </div>
             <p className="text-white/80 leading-relaxed mb-6 text-base">
               Creating epic 3-day Garden Route adventures along South Africa's stunning coastline. 
@@ -103,7 +103,7 @@ const Footer = () => {
             
             <div className="text-center lg:text-left">
               <p className="text-white/60 text-sm">
-                © 2024 Garden Route Adventures. All rights reserved.
+                © 2024 La Family Tour. All rights reserved.
               </p>
             </div>
             
