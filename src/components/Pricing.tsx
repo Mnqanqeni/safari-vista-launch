@@ -48,17 +48,7 @@ const packages = [
     description: "Perfect for travelers with existing accommodation - professional driver service for all Garden Route activities",
     currency: "",
     minPeople: "more than 2 people",
-    features: [
-      "Professional driver & guide service",
-      "Route 62 scenic drive",
-      "Cango Caves exploration tour",
-      "Elephant encounter at Buffelsdrif",
-      "Kaaimans River kayaking adventure",
-      "Game drive at Botlierskop Private Reserve",
-      "Storms River Mouth hiking trail",
-      "Transportation in comfortable vehicle",
-      "Departure 4:40 AM from Cape Town"
-    ],
+    features: [],
     popular: false
   }
 ];
