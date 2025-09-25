@@ -47,7 +47,7 @@ const packages = [
     duration: "3 Days",
     description: "Perfect for travelers with existing accommodation - professional driver service for all Garden Route activities",
     currency: "",
-    minPeople: "2 people minimum",
+    minPeople: "more than 2 people",
     features: [
       "Professional driver & guide service",
       "Route 62 scenic drive",
