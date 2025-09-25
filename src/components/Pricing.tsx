@@ -43,10 +43,10 @@ const packages = [
   },
   {
     name: "Driver Service Only",
-    price: "3,200",
+    price: "",
     duration: "3 Days",
     description: "Perfect for travelers with existing accommodation - professional driver service for all Garden Route activities",
-    currency: "R",
+    currency: "",
     minPeople: "2 people minimum",
     features: [
       "Professional driver & guide service",
@@ -102,12 +102,20 @@ const Pricing = () => {
                   {pkg.name}
                 </CardTitle>
                 <div className="mb-6">
-                  <span className="text-5xl md:text-6xl font-bold text-safari-brown">
-                    {pkg.currency || "R"}{pkg.price}
-                  </span>
-                  <span className="text-muted-foreground text-xl ml-3">
-                    / {pkg.duration}
-                  </span>
+                  {pkg.price ? (
+                    <>
+                      <span className="text-5xl md:text-6xl font-bold text-safari-brown">
+                        {pkg.currency || "R"}{pkg.price}
+                      </span>
+                      <span className="text-muted-foreground text-xl ml-3">
+                        / {pkg.duration}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-2xl md:text-3xl font-bold text-safari-brown">
+                      Contact for Pricing
+                    </span>
+                  )}
                   {pkg.minPeople && (
                     <div className="text-sm text-muted-foreground mt-2">
                       {pkg.minPeople}
