@@ -40,6 +40,26 @@ const packages = [
       "Departure 4:40 AM from Cape Town"
     ],
     popular: false
+  },
+  {
+    name: "Driver Service Only",
+    price: "3,200",
+    duration: "3 Days",
+    description: "Perfect for travelers with existing accommodation - professional driver service for all Garden Route activities",
+    currency: "R",
+    minPeople: "2 people minimum",
+    features: [
+      "Professional driver & guide service",
+      "Route 62 scenic drive",
+      "Cango Caves exploration tour",
+      "Elephant encounter at Buffelsdrif",
+      "Kaaimans River kayaking adventure",
+      "Game drive at Botlierskop Private Reserve",
+      "Storms River Mouth hiking trail",
+      "Transportation in comfortable vehicle",
+      "Departure 4:40 AM from Cape Town"
+    ],
+    popular: false
   }
 ];
 
@@ -57,7 +77,7 @@ const Pricing = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {packages.map((pkg, index) => (
             <Card 
               key={pkg.name}
