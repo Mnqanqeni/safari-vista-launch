@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import krugerImage from "@/assets/kruger-park.jpg";
-import serengetiImage from "@/assets/serengeti.jpg";
-import okavangoDeltaImage from "@/assets/okavango-delta.jpg";
+import krugerImage from "@/assets/elephants-safari.jpg";
+import serengetiImage from "@/assets/zebras-safari.jpg";
+import okavangoDeltaImage from "@/assets/rhino-safari.jpg";
 
 const destinations = [
   {
