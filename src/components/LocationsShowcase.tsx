@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import krugerImage from "@/assets/zebras-safari.jpg";
 import serengetiImage from "@/assets/elephants-safari.jpg";
 import okavangoDeltaImage from "@/assets/rhino-safari.jpg";
@@ -80,10 +79,6 @@ const LocationsShowcase = () => {
                     ))}
                   </div>
                 </div>
-                
-                <Button variant="adventure" className="w-full">
-                  Explore Destination
-                </Button>
               </CardContent>
             </Card>
           ))}
