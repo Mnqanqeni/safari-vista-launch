@@ -147,11 +147,8 @@ const Pricing = () => {
             Prices exclude meals, drinks, and optional activities like bungy jumping. 
             A minimum of 3 people is required for the tour to proceed.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="text-lg px-8" asChild>
-              <a href="https://wa.me/27749909229">Contact Steve Now</a>
-            </Button>
-            <Button variant="default" size="lg" className="text-lg px-8" asChild>
+          <div className="flex justify-center">
+            <Button variant="golden" size="lg" className="text-lg px-8" asChild>
               <Link to="/booking">Book Your Adventure</Link>
             </Button>
           </div>
