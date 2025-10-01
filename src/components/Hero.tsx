@@ -1,16 +1,66 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/lions-safari.jpg";
+import { useState, useEffect, useRef } from "react";
+import lionsImage from "@/assets/lions-safari.jpg";
+import safariImage from "@/assets/safari-hero.jpg";
+import tourVideo from "@/assets/tour-video.mp4";
 
 const Hero = () => {
+  const [currentMedia, setCurrentMedia] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const media = [
+    { type: "image", src: lionsImage },
+    { type: "image", src: safariImage },
+    { type: "video", src: tourVideo }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentMedia((prev) => (prev + 1) % media.length);
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current && media[currentMedia].type === "video") {
+      videoRef.current.currentTime = 5; // Skip first 5 seconds
+      videoRef.current.play();
+    }
+  }, [currentMedia]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-hero"></div>
-      </div>
+      {/* Background Media Carousel */}
+      {media.map((item, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            currentMedia === index ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {item.type === "image" ? (
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${item.src})` }}
+            >
+              <div className="absolute inset-0 bg-gradient-hero"></div>
+            </div>
+          ) : (
+            <>
+              <video
+                ref={videoRef}
+                className="absolute inset-0 w-full h-full object-cover"
+                muted
+                loop
+                playsInline
+              >
+                <source src={item.src} type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-hero"></div>
+            </>
+          )}
+        </div>
+      ))}
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
