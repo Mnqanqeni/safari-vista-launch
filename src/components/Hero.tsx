@@ -74,15 +74,6 @@ const Hero = () => {
           From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
-          <Button variant="golden" size="lg" className="text-lg px-8 py-4 h-auto">
-            Explore Destinations
-          </Button>
-          <Button variant="hero-outline" size="lg" className="text-lg px-8 py-4 h-auto">
-            View Packages
-          </Button>
-        </div>
-        
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
