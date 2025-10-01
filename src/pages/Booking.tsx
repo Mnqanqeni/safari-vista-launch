@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Users, MessageSquare } from "lucide-react";
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
@@ -22,6 +22,10 @@ const Booking = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
