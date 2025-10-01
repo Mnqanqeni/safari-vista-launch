@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Star, Crown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const packages = [
   {
@@ -131,8 +132,9 @@ const Pricing = () => {
                   variant={pkg.popular ? "golden" : "adventure"} 
                   size="lg" 
                   className="w-full text-lg py-4 h-auto"
+                  asChild
                 >
-                  Book This Safari
+                  <Link to="/booking">Book This Safari</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -146,11 +148,11 @@ const Pricing = () => {
             A minimum of 3 people is required for the tour to proceed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="text-lg px-8">
-              Contact Steve Now
+            <Button variant="outline" size="lg" className="text-lg px-8" asChild>
+              <a href="https://wa.me/27749909229">Contact Steve Now</a>
             </Button>
-            <Button variant="default" size="lg" className="text-lg px-8">
-              Book Your Adventure
+            <Button variant="default" size="lg" className="text-lg px-8" asChild>
+              <Link to="/booking">Book Your Adventure</Link>
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-6">

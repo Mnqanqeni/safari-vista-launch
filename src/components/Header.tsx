@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,8 +40,8 @@ const Header = () => {
           
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="golden" size="lg" className="text-lg px-6">
-              Book Now
+            <Button variant="golden" size="lg" className="text-lg px-6" asChild>
+              <Link to="/booking">Book Now</Link>
             </Button>
           </div>
           
@@ -68,8 +69,8 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-4 pt-4">
-                <Button variant="golden" size="lg" className="w-full text-lg">
-                  Book Now
+                <Button variant="golden" size="lg" className="w-full text-lg" asChild>
+                  <Link to="/booking" onClick={() => setIsMenuOpen(false)}>Book Now</Link>
                 </Button>
               </div>
             </nav>
