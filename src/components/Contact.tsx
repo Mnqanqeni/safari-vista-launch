@@ -3,8 +3,68 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useState, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    package: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS configuration - Replace with your own IDs
+      // Sign up at https://www.emailjs.com/
+      await emailjs.send(
+        'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          phone: formData.phone,
+          package: formData.package,
+          message: formData.message,
+          to_email: 'stevemwampale@gmail.com',
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "Steve will contact you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        package: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try WhatsApp or email directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -32,60 +92,99 @@ const Contact = () => {
               </CardHeader>
               
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="text-sm font-semibold text-foreground mb-3 block">
+                        First Name *
+                      </label>
+                      <Input 
+                        placeholder="John" 
+                        className="bg-background h-12 text-base"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-semibold text-foreground mb-3 block">
+                        Last Name *
+                      </label>
+                      <Input 
+                        placeholder="Doe" 
+                        className="bg-background h-12 text-base"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                        required
+                      />
+                    </div>
+                  </div>
+                  
                   <div>
                     <label className="text-sm font-semibold text-foreground mb-3 block">
-                      First Name *
+                      Email Address *
                     </label>
-                    <Input placeholder="John" className="bg-background h-12 text-base" />
+                    <Input 
+                      type="email" 
+                      placeholder="john@example.com" 
+                      className="bg-background h-12 text-base"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
                   </div>
+                  
                   <div>
                     <label className="text-sm font-semibold text-foreground mb-3 block">
-                      Last Name *
+                      Phone Number
                     </label>
-                    <Input placeholder="Doe" className="bg-background h-12 text-base" />
+                    <Input 
+                      type="tel" 
+                      placeholder="+1 (555) 123-4567" 
+                      className="bg-background h-12 text-base"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    />
                   </div>
-                </div>
-                
-                <div>
-                  <label className="text-sm font-semibold text-foreground mb-3 block">
-                    Email Address *
-                  </label>
-                  <Input type="email" placeholder="john@example.com" className="bg-background h-12 text-base" />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-semibold text-foreground mb-3 block">
-                    Phone Number
-                  </label>
-                  <Input type="tel" placeholder="+1 (555) 123-4567" className="bg-background h-12 text-base" />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-semibold text-foreground mb-3 block">
-                    Preferred Safari Package
-                  </label>
-                  <select className="w-full p-3 h-12 rounded-md border border-input bg-background text-foreground text-base focus:ring-2 focus:ring-ring focus:border-transparent">
-                    <option>Select a package</option>
-                    <option>Garden Route Epic Adventure (3 Days - R5,000)</option>
-                    <option>Group Adventure 4+ People (3 Days - R4,700)</option>
-                    <option>Custom Garden Route Experience</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="text-sm font-semibold text-foreground mb-3 block">
-                    Tell Us About Your Dream Safari
-                  </label>
-                  <Textarea 
-                    placeholder="Share your preferred dates, group size, special interests (Big Five, photography, cultural experiences), dietary requirements, or any other details that will help us create your perfect safari..."
-                    className="min-h-[140px] bg-background text-base"
-                  />
-                </div>
-                
-                <Button variant="golden" size="lg" className="w-full text-lg py-4 h-auto">
-                  Send Message
-                </Button>
+                  
+                  <div>
+                    <label className="text-sm font-semibold text-foreground mb-3 block">
+                      Preferred Safari Package
+                    </label>
+                    <select 
+                      className="w-full p-3 h-12 rounded-md border border-input bg-background text-foreground text-base focus:ring-2 focus:ring-ring focus:border-transparent"
+                      value={formData.package}
+                      onChange={(e) => setFormData({...formData, package: e.target.value})}
+                    >
+                      <option>Select a package</option>
+                      <option>Garden Route Epic Adventure (3 Days - R5,000)</option>
+                      <option>Group Adventure 4+ People (3 Days - R4,700)</option>
+                      <option>Custom Garden Route Experience</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-semibold text-foreground mb-3 block">
+                      Tell Us About Your Dream Safari
+                    </label>
+                    <Textarea 
+                      placeholder="Share your preferred dates, group size, special interests (Big Five, photography, cultural experiences), dietary requirements, or any other details that will help us create your perfect safari..."
+                      className="min-h-[140px] bg-background text-base"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    variant="golden" 
+                    size="lg" 
+                    className="w-full text-lg py-4 h-auto"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
             
