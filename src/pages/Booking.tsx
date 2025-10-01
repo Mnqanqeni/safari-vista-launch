@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Users, MessageSquare } from "lucide-react";
 import { useState, FormEvent, useEffect } from "react";
-import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -32,38 +31,45 @@ const Booking = () => {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        {
-          from_name: `${formData.firstName} ${formData.lastName}`,
-          from_email: formData.email,
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "5e8e6711-df49-4c77-a832-da15d828afd3",
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
           phone: formData.phone,
           package: formData.package,
-          num_people: formData.numPeople,
+          number_of_people: formData.numPeople,
           preferred_date: formData.preferredDate,
           message: formData.message,
-          to_email: 'stevemwampale@gmail.com',
-          booking_type: 'Safari Booking'
-        },
-        'YOUR_PUBLIC_KEY'
-      );
-
-      toast({
-        title: "Booking request sent!",
-        description: "Steve will contact you within 24 hours to confirm your booking.",
+          subject: "New Booking Request - La Family Tour",
+        }),
       });
 
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        package: "",
-        numPeople: "",
-        preferredDate: "",
-        message: ""
-      });
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Booking request sent!",
+          description: "Steve will contact you within 24 hours to confirm your booking.",
+        });
+
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          package: "",
+          numPeople: "",
+          preferredDate: "",
+          message: ""
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (error) {
       toast({
         title: "Error",

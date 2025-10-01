@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState, FormEvent } from "react";
-import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -24,36 +23,42 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // EmailJS configuration - Replace with your own IDs
-      // Sign up at https://www.emailjs.com/
-      await emailjs.send(
-        'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        {
-          from_name: `${formData.firstName} ${formData.lastName}`,
-          from_email: formData.email,
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "5e8e6711-df49-4c77-a832-da15d828afd3",
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
           phone: formData.phone,
           package: formData.package,
           message: formData.message,
-          to_email: 'stevemwampale@gmail.com',
-        },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
-      );
-
-      toast({
-        title: "Message sent!",
-        description: "Steve will contact you within 24 hours.",
+          subject: "New Contact Form Submission - La Family Tour",
+        }),
       });
 
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        package: "",
-        message: ""
-      });
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: "Steve will contact you within 24 hours.",
+        });
+
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          package: "",
+          message: ""
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (error) {
       toast({
         title: "Error",
