@@ -18,23 +18,23 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <div className="w-12 h-12 bg-gradient-sunset rounded-full flex items-center justify-center shadow-gold">
               <span className="text-white font-bold text-xl">SA</span>
             </div>
             <span className="text-2xl font-bold text-foreground">La Family Tour</span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={`/${item.href}`}
                 className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-lg relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-safari-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
           
@@ -59,14 +59,14 @@ const Header = () => {
           <div className="md:hidden py-6 border-t border-border bg-white/98 backdrop-blur-sm">
             <nav className="flex flex-col space-y-6">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={`/${item.href}`}
                   className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-lg px-4 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="px-4 pt-4">
                 <Button variant="golden" size="lg" className="w-full text-lg" asChild>
