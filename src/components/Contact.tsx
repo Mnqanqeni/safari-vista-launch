@@ -268,7 +268,7 @@ const Contact = () => {
               <Card className="bg-gradient-card border-0 shadow-card">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-foreground mb-6">
-                    Follow Our Adventures
+                    Follow La Family Tour
                   </h3>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
@@ -287,7 +287,6 @@ const Contact = () => {
                     >
                       <Instagram className="w-8 h-8 mb-3" />
                       <span className="font-semibold">Instagram</span>
-                      <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
                     </Button>
                   </div>
                   
