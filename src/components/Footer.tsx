@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-6">
-              <img src={logo} alt="La Family Tour Logo" className="h-28 w-auto" />
+              <img src={logo} alt="La Family Tour Logo" className="h-32 w-auto" />
             </div>
             <p className="text-white/80 leading-relaxed mb-6 text-base">
               Creating epic 3-day Garden Route adventures along South Africa's stunning coastline. 
