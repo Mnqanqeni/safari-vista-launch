@@ -1,5 +1,5 @@
 import { MessageSquare, Instagram, Facebook, Mail, Phone, MapPin, Heart } from "lucide-react";
-import logo from "@/assets/la-family-tour-logo.jpg";
+import logo from "@/assets/la-family-tour-logo.png";
 
 const Footer = () => {
   return (
