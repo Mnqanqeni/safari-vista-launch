@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
-            <img src={logo} alt="La Family Tour Logo" className="h-16 w-auto" />
+            <img src={logo} alt="La Family Tour Logo" className="h-20 w-auto" />
           </Link>
           
           {/* Desktop Navigation */}
