@@ -1,4 +1,5 @@
 import { MessageSquare, Instagram, Facebook, Mail, Phone, MapPin, Heart } from "lucide-react";
+import logo from "@/assets/la-family-tour-logo.jpg";
 
 const Footer = () => {
   return (
@@ -7,11 +8,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-safari-gold rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">LF</span>
-              </div>
-              <span className="text-2xl font-bold">La Family Tour</span>
+            <div className="mb-6">
+              <img src={logo} alt="La Family Tour Logo" className="h-20 w-auto" />
             </div>
             <p className="text-white/80 leading-relaxed mb-6 text-base">
               Creating epic 3-day Garden Route adventures along South Africa's stunning coastline. 

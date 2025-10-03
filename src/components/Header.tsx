@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/la-family-tour-logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +19,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <div className="w-12 h-12 bg-gradient-sunset rounded-full flex items-center justify-center shadow-gold">
-              <span className="text-white font-bold text-xl">SA</span>
-            </div>
-            <span className="text-2xl font-bold text-foreground">La Family Tour</span>
+          <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
+            <img src={logo} alt="La Family Tour Logo" className="h-16 w-auto" />
           </Link>
           
           {/* Desktop Navigation */}
