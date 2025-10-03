@@ -48,7 +48,7 @@ const Header = () => {
             className="md:hidden p-2 text-foreground hover:text-safari-gold transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            {isMenuOpen ? <X className="w-10 h-10" /> : <Menu className="w-10 h-10" />}
           </button>
         </div>
         
