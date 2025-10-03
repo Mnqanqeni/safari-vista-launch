@@ -16,8 +16,8 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
             <img src={logo} alt="La Family Tour Logo" className="h-24 w-auto" />
