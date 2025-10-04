@@ -35,7 +35,7 @@ const Footer = () => {
               <li><a href="#destinations" className="hover:text-safari-gold transition-colors duration-300 text-base">Adventure Highlights</a></li>
               <li><a href="#about" className="hover:text-safari-gold transition-colors duration-300 text-base">About Us</a></li>
               <li><a href="#tours" className="hover:text-safari-gold transition-colors duration-300 text-base">Tour Packages</a></li>
-              <li><a href="#contact" className="hover:text-safari-gold transition-colors duration-300 text-base">Contact Steve</a></li>
+              <li><a href="#contact" className="hover:text-safari-gold transition-colors duration-300 text-base">Contact Us</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Garden Route Guide</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Photo Gallery</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Adventure Blog</a></li>
@@ -58,7 +58,7 @@ const Footer = () => {
           
           {/* Contact Details */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Contact Steve</h3>
+            <h3 className="text-xl font-bold mb-6">Contact Us</h3>
             <div className="space-y-4 text-white/80">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 flex-shrink-0 text-safari-gold" />
@@ -82,23 +82,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="mt-8 p-4 bg-safari-gold/20 rounded-lg border border-safari-gold/30">
-              <p className="text-sm font-semibold mb-2 text-safari-gold">3-Day Adventure</p>
-              <p className="text-white font-bold text-lg">R5,000 (3+ people)</p>
-              <p className="text-xs mt-1 text-white/70">R4,700 for groups of 4+</p>
-            </div>
           </div>
         </div>
         
         <div className="border-t border-white/20 mt-16 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
-            <div className="flex items-center space-x-2 text-white/80">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-safari-gold" />
-              <span>for Garden Route adventure experiences</span>
-            </div>
-            
             <div className="text-center lg:text-left">
               <p className="text-white/60 text-sm">
                 © 2024 La Family Tour. All rights reserved.

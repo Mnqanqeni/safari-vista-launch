@@ -79,7 +79,7 @@ const Contact = () => {
             Contact La Family Tour
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Ready to embark on your Garden Route epic adventure? Contact Steve to book your 
+            Ready to embark on your Garden Route epic adventure? Contact us to book your 
             unforgettable 3-day journey along South Africa's spectacular coastline.
           </p>
         </div>
@@ -252,7 +252,7 @@ const Contact = () => {
                   WhatsApp Quick Booking
                 </h3>
                 <p className="text-lg mb-6 text-white/90">
-                  Contact Steve directly on WhatsApp for instant booking and Garden Route adventure details! 
+                  Contact us directly on WhatsApp for instant booking and Garden Route adventure details! 
                   Quick responses and immediate assistance available.
                 </p>
                 <Button 
