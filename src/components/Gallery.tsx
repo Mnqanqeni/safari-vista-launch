@@ -42,61 +42,40 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-          {galleryImages.map((image, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden cursor-pointer group hover:shadow-2xl transition-all duration-300"
-              onClick={() => setSelectedImage(index)}
-            >
-              <div className="relative aspect-square overflow-hidden">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-white font-semibold text-sm">{image.title}</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <Carousel 
-            className="w-full max-w-xs mx-auto"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <CarouselContent>
-              {galleryImages.map((image, index) => (
-                <CarouselItem key={index}>
-                  <Card className="overflow-hidden">
-                    <div className="relative aspect-square">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                        <p className="text-white font-semibold">{image.title}</p>
+        {/* Horizontal Carousel for all screens */}
+        <Carousel 
+          className="w-full"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {galleryImages.map((image, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <Card
+                  className="overflow-hidden cursor-pointer group hover:shadow-2xl transition-all duration-300"
+                  onClick={() => setSelectedImage(index)}
+                >
+                  <div className="relative aspect-square overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <p className="text-white font-semibold text-sm">{image.title}</p>
                       </div>
                     </div>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
 
         {/* Lightbox Modal */}
         {selectedImage !== null && (
