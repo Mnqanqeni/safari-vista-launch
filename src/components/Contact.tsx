@@ -278,7 +278,7 @@ const Contact = () => {
                     >
                       <Facebook className="w-8 h-8 mb-3" />
                       <span className="font-semibold">Facebook</span>
-                      <span className="text-sm text-muted-foreground">@SafariAdventures</span>
+                      <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
                     </Button>
                     
                     <Button 
@@ -287,6 +287,7 @@ const Contact = () => {
                     >
                       <Instagram className="w-8 h-8 mb-3" />
                       <span className="font-semibold">Instagram</span>
+                      <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
                     </Button>
                   </div>
                   
