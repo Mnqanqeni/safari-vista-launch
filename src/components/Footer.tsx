@@ -72,16 +72,10 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/20 mt-8 md:mt-16 pt-6 md:pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <div className="text-center lg:text-left">
-              <p className="text-white/60 text-xs md:text-sm">
-                © 2024 La Family Tour. All rights reserved.
-              </p>
-            </div>
-            
-            <div className="flex space-x-6 text-xs md:text-sm text-white/60">
-              <a href="#" className="hover:text-safari-gold transition-colors">Terms of Service</a>
-            </div>
+          <div className="text-center">
+            <p className="text-white/60 text-xs md:text-sm">
+              © 2024 La Family Tour. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
