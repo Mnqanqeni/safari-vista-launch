@@ -33,9 +33,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-4 text-white/80">
               <li><a href="#destinations" className="hover:text-safari-gold transition-colors duration-300 text-base">Adventure Highlights</a></li>
-              <li><a href="#about" className="hover:text-safari-gold transition-colors duration-300 text-base">About Us</a></li>
               <li><a href="#tours" className="hover:text-safari-gold transition-colors duration-300 text-base">Tour Packages</a></li>
-              <li><a href="#contact" className="hover:text-safari-gold transition-colors duration-300 text-base">Contact Us</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Garden Route Guide</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Photo Gallery</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Adventure Blog</a></li>
