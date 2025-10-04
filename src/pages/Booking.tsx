@@ -142,8 +142,8 @@ const Booking = () => {
                         Email Address *
                       </label>
                       <Input 
-                        type="email" 
-                        placeholder="john@example.com" 
+                  type="email"
+                  placeholder="john@gmail.com"
                         className="bg-background h-12 text-base"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -155,8 +155,8 @@ const Booking = () => {
                         Phone Number *
                       </label>
                       <Input 
-                        type="tel" 
-                        placeholder="+27 74 990 9229" 
+                  type="tel"
+                  placeholder="+27 82 123 4567"
                         className="bg-background h-12 text-base"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}

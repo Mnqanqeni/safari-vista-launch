@@ -38,16 +38,18 @@ const Gallery = () => {
             Adventure Gallery
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Witness the breathtaking moments from our safaris - from majestic wildlife to stunning landscapes
+            Witness the breathtaking moments majestic wildlife to stunning landscapes
           </p>
         </div>
 
         {/* Horizontal Carousel for all screens */}
         <Carousel 
-          className="w-full"
+          className="w-full cursor-grab active:cursor-grabbing"
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
+            containScroll: "trimSnaps",
           }}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
