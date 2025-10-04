@@ -74,23 +74,15 @@ const Hero = () => {
           From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-          <Button 
-            size="lg" 
-            className="bg-safari-gold hover:bg-safari-gold/90 text-black font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-            onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            View Adventure Gallery
-          </Button>
-        </div>
+        <Button 
+          size="lg" 
+          className="bg-safari-gold hover:bg-safari-gold/90 text-black font-semibold px-10 py-7 text-xl shadow-2xl hover:shadow-safari-gold/50 transition-all duration-300 hover:scale-110"
+          onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          View Adventure Gallery
+        </Button>
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <div className="w-7 h-11 border-2 border-white/80 rounded-full flex justify-center items-start pt-2 backdrop-blur-sm bg-black/10">
-          <div className="w-1.5 h-3 bg-white rounded-full animate-pulse"></div>
-        </div>
-      </div>
     </section>
   );
 };
