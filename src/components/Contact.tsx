@@ -238,7 +238,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-lg">Tour Duration</p>
-                      <p className="text-muted-foreground text-base">3 Days Epic Adventure</p>
+                      <p className="text-muted-foreground text-base">3 days</p>
                     </div>
                   </div>
                 </div>
