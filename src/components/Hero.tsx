@@ -74,6 +74,15 @@ const Hero = () => {
           From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
         
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+          <Button 
+            size="lg" 
+            className="bg-safari-gold hover:bg-safari-gold/90 text-black font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            View Adventure Gallery
+          </Button>
+        </div>
       </div>
       
       {/* Scroll Indicator */}
