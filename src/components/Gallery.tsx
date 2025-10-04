@@ -68,7 +68,13 @@ const Gallery = () => {
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel className="w-full max-w-xs mx-auto">
+          <Carousel 
+            className="w-full max-w-xs mx-auto"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
             <CarouselContent>
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index}>
