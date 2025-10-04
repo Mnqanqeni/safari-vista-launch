@@ -38,7 +38,7 @@ const Gallery = () => {
             Adventure Gallery
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Witness the breathtaking moments majestic wildlife to stunning landscapes
+            Witness the breathtaking moments from our safaris - from majestic wildlife to stunning landscapes
           </p>
         </div>
 
