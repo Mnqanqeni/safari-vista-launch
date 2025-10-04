@@ -253,7 +253,7 @@ const Booking = () => {
                   size="lg"
                   asChild
                 >
-                  <a href="https://wa.me/27749909229">
+                  <a href="https://wa.me/27749909229" target="_blank" rel="noopener noreferrer">
                     WhatsApp: +27 74 990 9229
                   </a>
                 </Button>

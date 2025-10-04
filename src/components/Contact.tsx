@@ -259,8 +259,11 @@ const Contact = () => {
                   variant="hero-outline" 
                   size="lg" 
                   className="w-full text-lg py-4 h-auto border-white text-white hover:bg-white hover:text-safari-brown"
+                  asChild
                 >
-                  WhatsApp +27 74 990 9229
+                  <a href="https://wa.me/27749909229" target="_blank" rel="noopener noreferrer">
+                    WhatsApp +27 74 990 9229
+                  </a>
                 </Button>
                 </CardContent>
               </Card>
