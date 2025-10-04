@@ -92,7 +92,7 @@ const Contact = () => {
                   Send Us a Message
                 </CardTitle>
                 <p className="text-muted-foreground text-lg">
-                  Fill out the form below and our safari experts will get back to you within 24 hours
+                  Fill out the form below and our tour experts will get back to you within 24 hours
                 </p>
               </CardHeader>
               
@@ -154,7 +154,7 @@ const Contact = () => {
                   
                   <div>
                     <label className="text-sm font-semibold text-foreground mb-3 block">
-                      Preferred Safari Package
+                      Preferred Tour Package
                     </label>
                     <select 
                       className="w-full p-3 h-12 rounded-md border border-input bg-background text-foreground text-base focus:ring-2 focus:ring-ring focus:border-transparent"
@@ -170,10 +170,10 @@ const Contact = () => {
                   
                   <div>
                     <label className="text-sm font-semibold text-foreground mb-3 block">
-                      Tell Us About Your Dream Safari
+                      Tell Us About Your Dream Adventure
                     </label>
                     <Textarea 
-                      placeholder="Share your preferred dates, group size, special interests (Big Five, photography, cultural experiences), dietary requirements, or any other details that will help us create your perfect safari..."
+                      placeholder="Share your preferred dates, group size, special interests (caves, wildlife, photography, cultural experiences), or any other details that will help us create your perfect Garden Route adventure..."
                       className="min-h-[140px] bg-background text-base"
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
@@ -292,8 +292,8 @@ const Contact = () => {
                   </div>
                   
                   <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                    Stay updated with our latest safari adventures, wildlife photography, and conservation stories. 
-                    Join our community of safari enthusiasts!
+                    Stay updated with our latest adventures, photography, and stories. 
+                    Join our community of adventure enthusiasts!
                   </p>
                 </CardContent>
               </Card>
