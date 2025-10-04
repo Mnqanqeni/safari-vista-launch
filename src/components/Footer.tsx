@@ -72,9 +72,12 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/20 mt-8 md:mt-16 pt-6 md:pt-8">
-          <div className="text-center">
+          <div className="text-center space-y-2">
             <p className="text-white/60 text-xs md:text-sm">
               © 2024 La Family Tour. All rights reserved.
+            </p>
+            <p className="text-white/40 text-xs">
+              Crafted by CoreLogic Systems
             </p>
           </div>
         </div>
