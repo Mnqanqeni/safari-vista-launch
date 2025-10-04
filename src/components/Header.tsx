@@ -26,13 +26,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
             {menuItems.map((item) => (
-              <Link
+              <a
                 key={item.label}
-                to={`/${item.href}`}
+                href={item.href}
                 className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-lg relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-safari-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
           </nav>
           
@@ -57,14 +57,14 @@ const Header = () => {
           <div className="md:hidden py-6 border-t border-border bg-white/98 backdrop-blur-sm">
             <nav className="flex flex-col space-y-6">
               {menuItems.map((item) => (
-                <Link
+                <a
                   key={item.label}
-                  to={`/${item.href}`}
+                  href={item.href}
                   className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-lg px-4 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </Link>
+                </a>
               ))}
               <div className="px-4 pt-4">
                 <Button variant="golden" size="lg" className="w-full text-lg" asChild>
