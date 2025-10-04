@@ -207,7 +207,7 @@ const Contact = () => {
                       <Phone className="w-7 h-7" />
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground text-lg">Call/WhatsApp Steve</p>
+                      <p className="font-semibold text-foreground text-lg">Call/WhatsApp</p>
                       <p className="text-muted-foreground text-base">+27 74 990 9229</p>
                     </div>
                   </div>
@@ -217,7 +217,7 @@ const Contact = () => {
                       <Mail className="w-7 h-7" />
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground text-lg">Email Steve</p>
+                      <p className="font-semibold text-foreground text-lg">Email</p>
                       <p className="text-muted-foreground text-base">stevemwampale@gmail.com</p>
                     </div>
                   </div>
