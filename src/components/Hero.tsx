@@ -69,14 +69,14 @@ const Hero = () => {
           <span className="block text-safari-gold">Epic Adventure</span>
         </h1>
         
-        <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
+        <p className="text-xl md:text-2xl lg:text-3xl mb-16 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
           Experience South Africa's stunning Garden Route on our 3-day epic adventure. 
           From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
         
         <Button 
           size="lg" 
-          className="bg-safari-gold hover:bg-safari-gold/90 text-black font-semibold px-10 py-7 text-xl shadow-2xl hover:shadow-safari-gold/50 transition-all duration-300 hover:scale-110"
+          className="bg-safari-gold hover:bg-safari-gold/90 text-black font-semibold px-10 py-7 text-xl shadow-2xl hover:shadow-safari-gold/50 transition-all duration-300 hover:scale-110 mt-4"
           onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
         >
           View Adventure Gallery
