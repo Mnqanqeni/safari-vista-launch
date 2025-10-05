@@ -88,8 +88,8 @@ const Gallery = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="left-2 md:left-4 bg-white/90 hover:bg-white shadow-lg border-2 border-safari-brown/20 hover:border-safari-gold w-12 h-12 md:w-14 md:h-14 transition-all duration-300 hover:scale-110" />
+            <CarouselNext className="right-2 md:right-4 bg-white/90 hover:bg-white shadow-lg border-2 border-safari-brown/20 hover:border-safari-gold w-12 h-12 md:w-14 md:h-14 transition-all duration-300 hover:scale-110" />
           </Carousel>
         </div>
 
