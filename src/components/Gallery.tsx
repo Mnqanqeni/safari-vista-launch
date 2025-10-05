@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -29,6 +29,18 @@ const galleryImages = [
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Add mouse wheel horizontal scrolling
+  const handleWheel = (e: React.WheelEvent) => {
+    if (carouselRef.current) {
+      const container = carouselRef.current.querySelector('[data-carousel-content]');
+      if (container) {
+        e.preventDefault();
+        container.scrollLeft += e.deltaY;
+      }
+    }
+  };
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
@@ -43,16 +55,17 @@ const Gallery = () => {
         </div>
 
         {/* Horizontal Carousel for all screens */}
-        <Carousel 
-          className="w-full cursor-grab active:cursor-grabbing"
-          opts={{
-            align: "start",
-            loop: true,
-            dragFree: true,
-            containScroll: "trimSnaps",
-          }}
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
+        <div ref={carouselRef} onWheel={handleWheel}>
+          <Carousel 
+            className="w-full cursor-grab active:cursor-grabbing"
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+              containScroll: "trimSnaps",
+            }}
+          >
+          <CarouselContent className="-ml-2 md:-ml-4" data-carousel-content>
             {galleryImages.map((image, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <Card
@@ -75,9 +88,10 @@ const Gallery = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
-        </Carousel>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+        </div>
 
         {/* Lightbox Modal */}
         {selectedImage !== null && (
