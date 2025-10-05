@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -30,6 +30,7 @@ const galleryImages = [
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Add mouse wheel horizontal scrolling
   const handleWheel = (e: React.WheelEvent) => {
@@ -41,6 +42,22 @@ const Gallery = () => {
       }
     }
   };
+
+  // Track scroll position for pagination dots
+  useEffect(() => {
+    const container = carouselRef.current?.querySelector('[data-carousel-content]');
+    if (!container) return;
+
+    const handleScroll = () => {
+      const scrollLeft = container.scrollLeft;
+      const itemWidth = container.scrollWidth / galleryImages.length;
+      const index = Math.round(scrollLeft / itemWidth);
+      setCurrentIndex(index);
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
@@ -91,6 +108,20 @@ const Gallery = () => {
             <CarouselPrevious className="hidden md:flex left-2 md:left-4 bg-white/90 hover:bg-white shadow-lg border-2 border-safari-brown/20 hover:border-safari-gold w-12 h-12 md:w-14 md:h-14 transition-all duration-300 hover:scale-110" />
             <CarouselNext className="hidden md:flex right-2 md:right-4 bg-white/90 hover:bg-white shadow-lg border-2 border-safari-brown/20 hover:border-safari-gold w-12 h-12 md:w-14 md:h-14 transition-all duration-300 hover:scale-110" />
           </Carousel>
+        </div>
+
+        {/* Pagination Dots for Mobile */}
+        <div className="flex justify-center gap-2 mt-6 md:hidden">
+          {galleryImages.map((_, index) => (
+            <div
+              key={index}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? 'w-8 bg-safari-gold'
+                  : 'w-2 bg-muted-foreground/30'
+              }`}
+            />
+          ))}
         </div>
 
         {/* Lightbox Modal */}
