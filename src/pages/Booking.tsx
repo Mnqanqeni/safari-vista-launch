@@ -23,13 +23,23 @@ const Booking = () => {
     }
   };
   
+  // Set default number of people based on service
+  const getDefaultNumPeople = () => {
+    switch(serviceParam) {
+      case 'driver': return "2";
+      case 'epic': return "3";
+      case 'group': return "4";
+      default: return "";
+    }
+  };
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     package: getDefaultPackage(),
-    numPeople: "",
+    numPeople: getDefaultNumPeople(),
     preferredDate: "",
     message: ""
   });
