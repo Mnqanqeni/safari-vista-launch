@@ -1,5 +1,6 @@
 import { MessageSquare, Instagram, Facebook, Mail, Phone, MapPin, Heart } from "lucide-react";
 import logo from "@/assets/la-family-tour-logo.png";
+import coreLogicLogo from "@/assets/corelogic-logo.png";
 
 const Footer = () => {
   return (
@@ -50,13 +51,14 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/20 mt-8 md:mt-16 pt-6 md:pt-8">
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-4">
             <p className="text-white/60 text-xs md:text-sm">
               © 2025 La Family Tour. All rights reserved.
             </p>
-            <p className="text-white/40 text-xs">
-              Crafted by CoreLogic Systems
-            </p>
+            <div className="flex flex-col items-center space-y-2">
+              <p className="text-white/40 text-xs">Crafted by</p>
+              <img src={coreLogicLogo} alt="CoreLogic Systems" className="h-12 md:h-16 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300" />
+            </div>
           </div>
         </div>
       </div>
