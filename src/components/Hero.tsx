@@ -80,7 +80,7 @@ const Hero = () => {
             ⭐ Most Popular Service
           </p>
           <p className="text-base md:text-lg opacity-90">
-            Already have accommodation? No problem. Our friendly, professional drivers with 5+ years of experience will get you there safely and comfortably.
+            Already have accommodation? No problem. Our friendly, professional drivers with 5+ years of experience will get you there safely and comfortably. Not booked your stay yet? Check out our other packages!
           </p>
         </div>
         
