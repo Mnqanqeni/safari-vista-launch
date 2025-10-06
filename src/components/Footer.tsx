@@ -16,14 +16,14 @@ const Footer = () => {
               Create epic 3-day Garden Route adventures along South Africa's stunning coastline.
             </p>
             <div className="flex space-x-4 justify-center md:justify-start">
-              <a href="https://wa.me/27749909229" target="_blank" rel="noopener noreferrer" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
-                <MessageSquare className="w-5 h-5 md:w-6 md:h-6" />
+              <a href="https://wa.me/27749909229" target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300 touch-manipulation active:scale-95" aria-label="WhatsApp">
+                <MessageSquare className="w-6 h-6 md:w-7 md:h-7" />
               </a>
-              <a href="#" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
-                <Instagram className="w-5 h-5 md:w-6 md:h-6" />
+              <a href="#" className="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300 touch-manipulation active:scale-95" aria-label="Instagram">
+                <Instagram className="w-6 h-6 md:w-7 md:h-7" />
               </a>
-              <a href="https://www.facebook.com/share/1Z4g6w2TJ7/?mibextid=wwXIfr" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
-                <Facebook className="w-5 h-5 md:w-6 md:h-6" />
+              <a href="https://www.facebook.com/share/1Z4g6w2TJ7/?mibextid=wwXIfr" className="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300 touch-manipulation active:scale-95" aria-label="Facebook">
+                <Facebook className="w-6 h-6 md:w-7 md:h-7" />
               </a>
             </div>
           </div>

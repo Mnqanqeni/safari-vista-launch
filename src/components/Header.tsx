@@ -45,29 +45,30 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground hover:text-safari-gold transition-colors"
+            className="md:hidden p-3 text-foreground hover:text-safari-gold transition-colors touch-manipulation active:scale-95"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-10 h-10" /> : <Menu className="w-10 h-10" />}
+            {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </div>
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-6 border-t border-border bg-white/98 backdrop-blur-sm">
-            <nav className="flex flex-col space-y-6">
+            <nav className="flex flex-col space-y-2">
               {menuItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-lg px-4 py-2"
+                  className="text-foreground hover:text-safari-gold transition-colors duration-200 font-semibold text-xl px-6 py-4 touch-manipulation active:bg-safari-gold/10"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="px-4 pt-4">
-                <Button variant="golden" size="lg" className="w-full text-lg" asChild>
+              <div className="px-6 pt-4">
+                <Button variant="golden" size="lg" className="w-full text-xl py-6 touch-manipulation active:scale-95" asChild>
                   <Link to="/booking" onClick={() => setIsMenuOpen(false)}>Book Now</Link>
                 </Button>
               </div>

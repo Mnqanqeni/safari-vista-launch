@@ -124,9 +124,15 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    cursor: none !important;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Hide cursor for all interactive elements */
+  a, button, input, textarea, select {
+    cursor: none !important;
   }
 }
