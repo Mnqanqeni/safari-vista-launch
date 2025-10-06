@@ -77,7 +77,8 @@ const Footer = () => {
             <p className="text-white/60 text-xs md:text-sm">
               © 2025 La Family Tour. All rights reserved.
             </p>
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center space-y-2">
+              <p className="text-white/40 text-xs">Crafted by</p>
               <img 
                 src={coreLogicLogo} 
                 alt="CoreLogic Systems" 
