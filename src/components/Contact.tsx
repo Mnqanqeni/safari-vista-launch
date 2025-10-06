@@ -162,6 +162,7 @@ const Contact = () => {
                       onChange={(e) => setFormData({...formData, package: e.target.value})}
                     >
                       <option>Select a package</option>
+                      <option>Driver Service Only</option>
                       <option>Garden Route Epic Adventure (3 Days - R5,000)</option>
                       <option>Group Adventure 4+ People (3 Days - R4,700)</option>
                       <option>Custom Garden Route Experience</option>

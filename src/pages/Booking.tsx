@@ -5,16 +5,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Users, MessageSquare } from "lucide-react";
 import { useState, FormEvent, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Booking = () => {
+  const [searchParams] = useSearchParams();
+  const serviceParam = searchParams.get('service');
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    package: "",
+    package: serviceParam === 'driver' ? "Driver Service Only" : "",
     numPeople: "",
     preferredDate: "",
     message: ""
@@ -176,6 +180,7 @@ const Booking = () => {
                       required
                     >
                       <option value="">Select a package</option>
+                      <option>Driver Service Only</option>
                       <option>Garden Route Epic Adventure (3 Days - R5,000)</option>
                       <option>Group Adventure 4+ People (3 Days - R4,700)</option>
                       <option>Custom Garden Route Experience</option>

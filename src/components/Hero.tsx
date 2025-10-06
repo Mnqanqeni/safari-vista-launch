@@ -90,7 +90,7 @@ const Hero = () => {
             className="bg-safari-gold hover:bg-safari-gold/90 text-black font-bold px-10 py-7 text-lg shadow-2xl hover:shadow-gold transition-all duration-300 hover:scale-105 border-2 border-white/20"
             asChild
           >
-            <Link to="/booking">Book Your Driver Now</Link>
+            <Link to="/booking?service=driver">Book Your Driver Now</Link>
           </Button>
           <Button 
             size="lg" 
