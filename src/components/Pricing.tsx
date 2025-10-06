@@ -5,6 +5,27 @@ import { Link } from "react-router-dom";
 
 const packages = [
   {
+    name: "Driver Service Only",
+    price: "",
+    duration: "3 Days",
+    description: "Our most popular service! Perfect for travelers with existing accommodation - just bring yourself and enjoy a trusted, professional driver for all Garden Route activities",
+    currency: "",
+    minPeople: "more than 2 people",
+    features: [
+      "Expert driver specializing in Garden Route",
+      "Professional, trusted, and experienced guide",
+      "Route 62 scenic drive with all stops",
+      "Cango Caves exploration coordination",
+      "Elephant encounter at Buffelsdrif",
+      "Kaaimans River kayaking transport",
+      "Game drive at Botlierskop coordination",
+      "Storms River activities and hiking",
+      "Flexible pickup from your accommodation",
+      "All transport and fuel included"
+    ],
+    popular: true
+  },
+  {
     name: "Garden Route Epic Adventure",
     price: "5,000",
     duration: "3 Days",
@@ -21,7 +42,7 @@ const packages = [
       "Storms River Mouth hiking trail",
       "Departure 4:40 AM from Cape Town"
     ],
-    popular: true
+    popular: false
   },
   {
     name: "Group Adventure",
@@ -40,16 +61,6 @@ const packages = [
       "Storms River Mouth hiking trail",
       "Departure 4:40 AM from Cape Town"
     ],
-    popular: false
-  },
-  {
-    name: "Driver Service Only",
-    price: "",
-    duration: "3 Days",
-    description: "Perfect for travelers with existing accommodation - professional driver service for all Garden Route activities",
-    currency: "",
-    minPeople: "more than 2 people",
-    features: [],
     popular: false
   }
 ];
