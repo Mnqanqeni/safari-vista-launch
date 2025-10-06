@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import lionsImage from "@/assets/lions-safari.jpg";
 import safariImage from "@/assets/safari-hero.jpg";
@@ -69,18 +70,35 @@ const Hero = () => {
           <span className="block text-safari-gold">Epic Adventure</span>
         </h1>
         
-        <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
+        <p className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
           Experience South Africa's stunning Garden Route on our 3-day epic adventure. 
           From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
         
+        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-10 max-w-2xl mx-auto border border-white/20 animate-fade-in">
+          <p className="text-lg md:text-xl font-semibold text-safari-gold mb-2">
+            ⭐ Most Popular Service
+          </p>
+          <p className="text-base md:text-lg opacity-90">
+            Already have accommodation? Get our trusted driver service only - most clients choose this option!
+          </p>
+        </div>
+        
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
           <Button 
             size="lg" 
-            className="bg-safari-gold hover:bg-safari-gold/90 text-black font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-            onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-safari-gold hover:bg-safari-gold/90 text-black font-bold px-10 py-7 text-lg shadow-2xl hover:shadow-gold transition-all duration-300 hover:scale-105 border-2 border-white/20"
+            asChild
           >
-            View Adventure Gallery
+            <Link to="/booking">Book Your Driver Now</Link>
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-6 text-lg shadow-xl border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:scale-105"
+            onClick={() => document.getElementById('tours')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            View All Packages
           </Button>
         </div>
       </div>
