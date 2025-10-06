@@ -84,10 +84,10 @@ const Hero = () => {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in w-full px-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
           <Button 
             size="lg" 
-            className="w-full sm:w-auto bg-safari-gold hover:bg-safari-gold/90 text-black font-bold px-8 sm:px-10 py-6 sm:py-7 text-lg sm:text-xl shadow-2xl hover:shadow-gold transition-all duration-300 hover:scale-105 border-2 border-white/20 touch-manipulation active:scale-95"
+            className="bg-safari-gold hover:bg-safari-gold/90 text-black font-bold px-10 py-7 text-lg shadow-2xl hover:shadow-gold transition-all duration-300 hover:scale-105 border-2 border-white/20"
             asChild
           >
             <Link to="/booking?service=driver">Book Your Driver Now</Link>
@@ -95,7 +95,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline"
-            className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-6 text-lg sm:text-xl shadow-xl border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 touch-manipulation active:scale-95"
+            className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-6 text-lg shadow-xl border-2 border-white/40 backdrop-blur-sm transition-all duration-300 hover:scale-105"
             onClick={() => document.getElementById('tours')?.scrollIntoView({ behavior: 'smooth' })}
           >
             View All Packages
