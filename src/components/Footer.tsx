@@ -12,7 +12,7 @@ const Footer = () => {
               <img src={logo} alt="La Family Tour Logo" className="h-16 md:h-24 w-auto" />
             </div>
             <p className="text-white/80 leading-relaxed mb-4 text-sm md:text-base">
-              Creating epic 3-day Garden Route adventures along South Africa's stunning coastline.
+              Create epic 3-day Garden Route adventures along South Africa's stunning coastline.
             </p>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a href="https://wa.me/27749909229" target="_blank" rel="noopener noreferrer" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
