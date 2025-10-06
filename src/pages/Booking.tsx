@@ -13,12 +13,22 @@ const Booking = () => {
   const [searchParams] = useSearchParams();
   const serviceParam = searchParams.get('service');
   
+  // Map service param to package name
+  const getDefaultPackage = () => {
+    switch(serviceParam) {
+      case 'driver': return "Driver Service Only";
+      case 'epic': return "Garden Route Epic Adventure (3 Days - R5,000)";
+      case 'group': return "Group Adventure 4+ People (3 Days - R4,700)";
+      default: return "";
+    }
+  };
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    package: serviceParam === 'driver' ? "Driver Service Only" : "",
+    package: getDefaultPackage(),
     numPeople: "",
     preferredDate: "",
     message: ""

@@ -145,7 +145,13 @@ const Pricing = () => {
                   className="w-full text-lg py-4 h-auto"
                   asChild
                 >
-                  <Link to="/booking">Book This Safari</Link>
+                  <Link to={`/booking?service=${
+                    pkg.name === "Driver Service Only" ? "driver" :
+                    pkg.name === "Garden Route Epic Adventure" ? "epic" :
+                    pkg.name === "Group Adventure" ? "group" : ""
+                  }`}>
+                    Book This Safari
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
