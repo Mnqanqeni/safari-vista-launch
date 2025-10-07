@@ -16,11 +16,12 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="container mx-auto px-2 sm:px-4">
-        <div className="flex items-center justify-between h-24">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
-            <img src={logo} alt="La Family Tour Logo" className="h-20 w-auto" />
+            <img src={logo} alt="La Family Tour Logo" className="h-20 w-auto hidden md:block" />
+            <span className="md:hidden text-2xl font-bold text-safari-gold">La Family Tour</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -45,10 +46,11 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground hover:text-safari-gold transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-safari-gold transition-colors touch-manipulation active:scale-95"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-10 h-10" /> : <Menu className="w-10 h-10" />}
+            {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </div>
         
