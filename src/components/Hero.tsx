@@ -70,7 +70,13 @@ const Hero = () => {
           <span className="block text-safari-gold">Epic Adventure</span>
         </h1>
         
-        <p className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
+        {/* Mobile text */}
+        <p className="md:hidden text-xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
+          Discover the Garden Route in 3 days, from Cango Caves to elephant encounters. Memories for a lifetime!
+        </p>
+        
+        {/* Desktop text */}
+        <p className="hidden md:block text-xl md:text-2xl lg:text-3xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
           Experience South Africa's stunning Garden Route on our 3-day epic adventure. 
           From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
