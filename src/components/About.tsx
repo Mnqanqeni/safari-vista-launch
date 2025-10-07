@@ -5,7 +5,7 @@ const features = [
   {
     icon: Users,
     title: "Expert Adventure Guide",
-    description: "Steve's extensive knowledge of the Garden Route ensures you experience the best hidden gems, local insights, and safe adventure guidance."
+    description: "Experience the Garden Route like a local, with expert guidance to uncover hidden gems and ensure a safe, memorable adventure."
   },
   {
     icon: Award,
