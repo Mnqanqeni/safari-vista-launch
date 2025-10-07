@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
         <div className="w-7 h-11 border-2 border-white/80 rounded-full flex justify-center items-start pt-2 backdrop-blur-sm bg-black/10">
           <div className="w-1.5 h-3 bg-white rounded-full animate-pulse"></div>
         </div>
