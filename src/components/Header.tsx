@@ -45,11 +45,11 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-1.5 sm:p-2 text-foreground hover:text-safari-gold transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-safari-gold transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-7 h-7 sm:w-8 sm:h-8" /> : <Menu className="w-7 h-7 sm:w-8 sm:h-8" />}
+            {isMenuOpen ? <X className="w-9 h-9 sm:w-10 sm:h-10" /> : <Menu className="w-9 h-9 sm:w-10 sm:h-10" />}
           </button>
         </div>
         
