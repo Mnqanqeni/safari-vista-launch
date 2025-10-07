@@ -157,22 +157,6 @@ const Pricing = () => {
             </Card>
           ))}
         </div>
-        
-        <div className="text-center bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-card max-w-4xl mx-auto">
-          <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">Important Booking Information</h3>
-          <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base md:text-lg leading-relaxed px-2">
-            Prices exclude meals, drinks, and optional activities like bungy jumping. 
-            A minimum of 3 people is required for the tour to proceed.
-          </p>
-          <div className="flex justify-center px-2">
-            <Button variant="golden" size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
-              <Link to="/booking">Book Your Adventure</Link>
-            </Button>
-          </div>
-          <p className="text-xs sm:text-sm text-muted-foreground mt-4 sm:mt-6 px-2">
-            Departure at 4:40 AM from Cape Town • Confirmation email provided after booking
-          </p>
-        </div>
       </div>
     </section>
   );
