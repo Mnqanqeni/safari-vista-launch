@@ -33,9 +33,9 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-4 text-white/80">
               <li><a href="#destinations" className="hover:text-safari-gold transition-colors duration-300 text-base">Adventure Highlights</a></li>
-              <li><a href="#tours" className="hover:text-safari-gold transition-colors duration-300 text-base">Tour Packages</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Garden Route Guide</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Photo Gallery</a></li>
+              <li><a href="#tours" className="hover:text-safari-gold transition-colors duration-300 text-base">Tour Packages</a></li>
             </ul>
           </div>
           
@@ -43,9 +43,9 @@ const Footer = () => {
           <div className="hidden lg:block">
             <h3 className="text-xl font-bold mb-6">Adventure Information</h3>
             <ul className="space-y-4 text-white/80">
-              <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">What to Pack</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Activity Guide</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Cango Caves Info</a></li>
+              <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">What to Pack</a></li>
               <li><a href="#" className="hover:text-safari-gold transition-colors duration-300 text-base">Wildlife Encounters</a></li>
             </ul>
           </div>
