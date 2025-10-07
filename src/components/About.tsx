@@ -89,8 +89,7 @@ const About = () => {
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <blockquote className="text-lg md:text-xl font-medium mb-6 italic">
-                    "Steve's Garden Route adventure was absolutely incredible! From exploring the magnificent Cango Caves to the thrilling 
-                    elephant encounter and game drive - every moment was perfectly planned. The 3 days felt like a lifetime of memories!"
+                    "Our Garden Route adventure with La Family Tour was absolutely incredible! From exploring the magnificent Cango Caves to the thrilling elephant encounter and game drive, every moment was perfectly planned. The 3 days felt like a lifetime of memories!"
                   </blockquote>
                   <cite className="text-safari-gold font-semibold text-lg">- Sarah & Mike Johnson, Cape Town</cite>
                   <div className="flex mt-4">
