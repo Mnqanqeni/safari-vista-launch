@@ -8,10 +8,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "Destinations", href: "#destinations" },
-    { label: "About", href: "#about" },
-    { label: "Tours", href: "#tours" },
-    { label: "Contact", href: "#contact" }
+    { label: "Destinations", href: "/#destinations" },
+    { label: "About", href: "/#about" },
+    { label: "Tours", href: "/#tours" },
+    { label: "Contact", href: "/#contact" }
   ];
 
   return (
