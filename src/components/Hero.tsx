@@ -65,23 +65,23 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
-        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 animate-fade-in leading-tight">
           Garden Route <span className="text-safari-gold">Epic Adventure</span>
         </h1>
         
         {/* Mobile text */}
-        <p className="md:hidden text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up opacity-90 px-2">
+        <p className="md:hidden text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up opacity-90 px-2">
           Discover the Garden Route in 3 days, from Cango Caves to elephant encounters. Memories for a lifetime!
         </p>
         
         {/* Desktop text */}
-        <p className="hidden md:block text-xl md:text-2xl lg:text-3xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
+        <p className="hidden md:block text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-90">
           Experience South Africa's stunning Garden Route on our 3-day epic adventure. 
           From Cango Caves to elephant encounters, create memories that will last a lifetime.
         </p>
         
-        <div className="bg-black/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-10 max-w-2xl mx-auto border border-white/20 animate-fade-in">
-          <p className="text-base sm:text-lg md:text-xl font-semibold text-safari-gold mb-2">
+        <div className="bg-black/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 mb-8 sm:mb-10 max-w-2xl mx-auto border border-white/20 animate-fade-in">
+          <p className="text-base sm:text-lg md:text-xl font-semibold text-safari-gold mb-3">
             ⭐ Most Popular Service
           </p>
           <p className="text-sm sm:text-base md:text-lg opacity-90 leading-relaxed">
@@ -89,7 +89,7 @@ const Hero = () => {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center animate-fade-in px-2 sm:px-0">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-stretch sm:items-center animate-fade-in px-2 sm:px-0">
           <Button 
             size="lg" 
             className="bg-safari-gold hover:bg-safari-gold/90 text-black font-bold px-6 sm:px-10 py-5 sm:py-7 text-base sm:text-lg shadow-2xl hover:shadow-gold transition-all duration-300 hover:scale-105 border-2 border-white/20 w-full sm:w-auto"
