@@ -43,10 +43,10 @@ const Footer = () => {
           <div className="hidden lg:block">
             <h3 className="text-xl font-bold mb-6">Adventure Information</h3>
             <ul className="space-y-4 text-white/80">
-              <li><a href="#about" className="hover:text-safari-gold transition-colors duration-300 text-base">What to Pack</a></li>
-              <li><a href="#destinations" className="hover:text-safari-gold transition-colors duration-300 text-base">Wildlife Encounters</a></li>
-              <li><a href="#destinations" className="hover:text-safari-gold transition-colors duration-300 text-base">Cango Caves Info</a></li>
-              <li><a href="#about" className="hover:text-safari-gold transition-colors duration-300 text-base">Activity Guide</a></li>
+              <li><a href="https://blog.rhinoafrica.com/2025/07/25/how-to-pack-for-a-safari-smarter-safer-lighter/" target="_blank" rel="noopener noreferrer" className="hover:text-safari-gold transition-colors duration-300 text-base">What to Pack</a></li>
+              <li><a href="https://www.thewildlifediaries.com/best-wildlife-experiences-of-the-garden-route/" target="_blank" rel="noopener noreferrer" className="hover:text-safari-gold transition-colors duration-300 text-base">Wildlife Encounters</a></li>
+              <li><a href="https://www.cango-caves.co.za/" target="_blank" rel="noopener noreferrer" className="hover:text-safari-gold transition-colors duration-300 text-base">Cango Caves Info</a></li>
+              <li><a href="https://gardenrouteadventureguide.com/" target="_blank" rel="noopener noreferrer" className="hover:text-safari-gold transition-colors duration-300 text-base">Activity Guide</a></li>
             </ul>
           </div>
           
