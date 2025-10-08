@@ -16,7 +16,7 @@ const Index = () => {
         <section id="destinations" className="py-16 md:py-20">
           <LocationsShowcase />
         </section>
-        <section id="gallery" className="py-16 md:py-20">
+        <section id="gallery">
           <Gallery />
         </section>
         <section id="about" className="py-16 md:py-20">
