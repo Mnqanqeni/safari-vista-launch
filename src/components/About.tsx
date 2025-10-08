@@ -15,7 +15,7 @@ const features = [
   {
     icon: Leaf,
     title: "Complete Adventure Package",
-    description: "From caves to wildlife encounters, kayaking to safaris - experience the full Garden Route adventure in just 3 action-packed days."
+    description: "From caves to wildlife encounters, kayaking to safaris, experience the full Garden Route adventure in just 3 action packed days."
   },
   {
     icon: Heart,
