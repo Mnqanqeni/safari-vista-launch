@@ -34,8 +34,8 @@ const About = () => {
             Why Choose La Family Tour
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Experience the ultimate Garden Route adventure with Steve's expert guidance. Our 3-day epic tour 
-            combines spectacular landscapes, thrilling activities, and unforgettable encounters along South Africa's most beautiful coastline.
+            Experience the ultimate Garden Route adventure with La Family Tour. Our 3-day epic tour 
+            combines spectacular landscapes, thrilling activities, and unforgettable encounters along South Africa&apos;s most beautiful coastline.
           </p>
         </div>
           
