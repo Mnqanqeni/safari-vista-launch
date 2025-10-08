@@ -79,11 +79,18 @@ const Footer = () => {
             </p>
             <div className="flex items-center justify-center space-x-2">
               <p className="text-white/40 text-xs">Crafted by</p>
-              <img 
-                src={coreLogicLogo} 
-                alt="CoreLogic Systems" 
-                className="h-8 md:h-10 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
+              <a 
+                href="https://corelogicsystems.co.za/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <img 
+                  src={coreLogicLogo} 
+                  alt="CoreLogic Systems" 
+                  className="h-8 md:h-10 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                />
+              </a>
             </div>
           </div>
         </div>
