@@ -13,19 +13,19 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <section id="destinations" className="py-16 md:py-20">
+        <section id="destinations">
           <LocationsShowcase />
         </section>
         <section id="gallery">
           <Gallery />
         </section>
-        <section id="about" className="py-16 md:py-20">
+        <section id="about">
           <About />
         </section>
-        <section id="tours" className="py-16 md:py-20">
+        <section id="tours">
           <Pricing />
         </section>
-        <section id="contact" className="py-16 md:py-20">
+        <section id="contact">
           <Contact />
         </section>
       </main>
