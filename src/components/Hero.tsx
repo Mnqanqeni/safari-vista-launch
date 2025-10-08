@@ -65,9 +65,8 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 max-w-5xl mx-auto">
-        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight">
-          Garden Route 
-          <span className="block text-safari-gold mt-1 sm:mt-2">Epic Adventure</span>
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight">
+          Garden Route <span className="text-safari-gold">Epic Adventure</span>
         </h1>
         
         {/* Mobile text */}
