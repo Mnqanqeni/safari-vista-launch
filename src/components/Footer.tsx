@@ -65,7 +65,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 text-safari-gold" />
                 <div>
                   <p className="text-xs md:text-sm">Email</p>
-                  <p className="font-medium text-sm md:text-base">stevemwampale@gmail.com</p>
+                  <p className="font-medium text-sm md:text-base">info@lafamilytour.co.za</p>
                 </div>
               </div>
             </div>

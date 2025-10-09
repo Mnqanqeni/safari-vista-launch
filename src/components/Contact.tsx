@@ -29,7 +29,7 @@ const Contact = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "e11e5b12-334a-43e4-8b9f-a57e14958c5b",
+          access_key: "147ee6de-738f-47d0-a15d-9a5261c98750",
           name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
           phone: formData.phone,
@@ -219,7 +219,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-lg">Email</p>
-                      <p className="text-muted-foreground text-base">stevemwampale@gmail.com</p>
+                      <p className="text-muted-foreground text-base">info@lafamilytour.co.za</p>
                     </div>
                   </div>
                   
