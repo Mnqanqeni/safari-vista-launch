@@ -78,7 +78,7 @@ const Booking = () => {
       if (result.success) {
         toast({
           title: "Booking request sent!",
-          description: "Steve will contact you within 24 hours to confirm your booking.",
+          description: "Our team will contact you within 12 hours to confirm your booking.",
         });
 
         setFormData({
@@ -117,7 +117,7 @@ const Booking = () => {
                 Book Your Garden Route Adventure
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Fill out the form below and Steve will contact you to confirm your 3-day Garden Route safari experience.
+                Fill out the form below and our team will contact you to confirm your 3-day Garden Route safari experience.
               </p>
             </div>
 
@@ -127,7 +127,7 @@ const Booking = () => {
                   Booking Information
                 </CardTitle>
                 <p className="text-muted-foreground text-lg">
-                  Please provide your details and we'll get back to you within 24 hours
+                  Please provide your details and we'll get back to you within 12 hours
                 </p>
               </CardHeader>
               
@@ -270,7 +270,7 @@ const Booking = () => {
 
             <div className="mt-8 text-center">
               <p className="text-lg text-muted-foreground mb-4">
-                Need immediate assistance? Contact Steve directly:
+                Need immediate assistance? Contact us directly:
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button 
@@ -287,8 +287,8 @@ const Booking = () => {
                   size="lg"
                   asChild
                 >
-                  <a href="mailto:stevemwampale@gmail.com">
-                    Email Steve
+                  <a href="mailto:info@lafamilytour.co.za">
+                    Email Us
                   </a>
                 </Button>
               </div>

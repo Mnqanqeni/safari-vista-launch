@@ -44,7 +44,7 @@ const Contact = () => {
       if (result.success) {
         toast({
           title: "Message sent!",
-          description: "Steve will contact you within 24 hours.",
+          description: "Our team will contact you within 12 hours.",
         });
 
         // Reset form
@@ -92,7 +92,7 @@ const Contact = () => {
                   Send Us a Message
                 </CardTitle>
                 <p className="text-muted-foreground text-lg">
-                  Fill out the form below and our tour experts will get back to you within 24 hours
+                  Fill out the form below and our tour experts will get back to you within 12 hours
                 </p>
               </CardHeader>
               
