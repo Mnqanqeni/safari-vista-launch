@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MessageSquare, Instagram, Facebook, Linkedin, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { MessageSquare, Instagram, Facebook, Linkedin, Music, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState, FormEvent } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -302,11 +302,22 @@ const Contact = () => {
                       href="https://www.linkedin.com/in/steve-joseph-mwampale/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex flex-col h-auto p-6 border border-input bg-background hover:bg-blue-50 hover:border-blue-700 hover:text-blue-700 transition-all duration-300 rounded-md items-center justify-center col-span-2"
+                      className="flex flex-col h-auto p-6 border border-input bg-background hover:bg-blue-50 hover:border-blue-700 hover:text-blue-700 transition-all duration-300 rounded-md items-center justify-center"
                     >
                       <Linkedin className="w-8 h-8 mb-3" />
                       <span className="font-semibold">LinkedIn</span>
-                      <span className="text-sm text-muted-foreground">Steve Joseph Mwampale</span>
+                      <span className="text-sm text-muted-foreground">Steve Joseph</span>
+                    </a>
+                    
+                    <a 
+                      href="https://www.tiktok.com/@lafamilytour" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex flex-col h-auto p-6 border border-input bg-background hover:bg-pink-50 hover:border-pink-600 hover:text-pink-600 transition-all duration-300 rounded-md items-center justify-center"
+                    >
+                      <Music className="w-8 h-8 mb-3" />
+                      <span className="font-semibold">TikTok</span>
+                      <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
                     </a>
                   </div>
                   

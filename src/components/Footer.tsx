@@ -1,4 +1,4 @@
-import { MessageSquare, Instagram, Facebook, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
+import { MessageSquare, Instagram, Facebook, Linkedin, Music, Mail, Phone, MapPin, Heart } from "lucide-react";
 import logo from "@/assets/la-family-tour-logo.png";
 import coreLogicLogo from "@/assets/corelogic-logo.png";
 
@@ -15,18 +15,21 @@ const Footer = () => {
             <p className="text-white/80 leading-relaxed mb-4 text-sm md:text-base">
               Create epic 3-day Garden Route adventures along South Africa's stunning coastline.
             </p>
-            <div className="flex space-x-4 justify-center md:justify-start">
-              <a href="https://wa.me/27749909229" target="_blank" rel="noopener noreferrer" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
-                <MessageSquare className="w-5 h-5 md:w-6 md:h-6" />
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+              <a href="https://wa.me/27749909229" target="_blank" rel="noopener noreferrer" className="w-11 h-11 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
+                <MessageSquare className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/lafamilytour/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
-                <Instagram className="w-5 h-5 md:w-6 md:h-6" />
+              <a href="https://www.instagram.com/lafamilytour/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/share/1Z4g6w2TJ7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
-                <Facebook className="w-5 h-5 md:w-6 md:h-6" />
+              <a href="https://www.facebook.com/share/1Z4g6w2TJ7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-11 h-11 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
+                <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/steve-joseph-mwampale/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
-                <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
+              <a href="https://www.linkedin.com/in/steve-joseph-mwampale/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://www.tiktok.com/@lafamilytour" target="_blank" rel="noopener noreferrer" className="w-11 h-11 md:w-12 md:h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-safari-gold transition-colors duration-300">
+                <Music className="w-5 h-5" />
               </a>
             </div>
           </div>
