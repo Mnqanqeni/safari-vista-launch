@@ -276,14 +276,16 @@ const Contact = () => {
                   </h3>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <Button 
-                      variant="outline" 
-                      className="flex-col h-auto p-6 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+                    <a 
+                      href="https://www.facebook.com/share/1Z4g6w2TJ7/?mibextid=wwXIfr" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex flex-col h-auto p-6 border border-input bg-background hover:bg-blue-50 hover:border-blue-500 hover:text-blue-600 transition-all duration-300 rounded-md items-center justify-center"
                     >
                       <Facebook className="w-8 h-8 mb-3" />
                       <span className="font-semibold">Facebook</span>
                       <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
-                    </Button>
+                    </a>
                     
                     <a 
                       href="https://www.instagram.com/lafamilytour/" 
