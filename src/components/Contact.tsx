@@ -288,10 +288,13 @@ const Contact = () => {
                     <Button 
                       variant="outline" 
                       className="flex-col h-auto p-6 hover:bg-pink-50 hover:border-pink-500 hover:text-pink-600 transition-all duration-300"
+                      asChild
                     >
-                      <Instagram className="w-8 h-8 mb-3" />
-                      <span className="font-semibold">Instagram</span>
-                      <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
+                      <a href="https://www.instagram.com/lafamilytour/" target="_blank" rel="noopener noreferrer">
+                        <Instagram className="w-8 h-8 mb-3" />
+                        <span className="font-semibold">Instagram</span>
+                        <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
+                      </a>
                     </Button>
                   </div>
                   
