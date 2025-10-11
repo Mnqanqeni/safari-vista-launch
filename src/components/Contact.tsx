@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MessageSquare, Instagram, Facebook, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { MessageSquare, Instagram, Facebook, Linkedin, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState, FormEvent } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -296,6 +296,17 @@ const Contact = () => {
                       <Instagram className="w-8 h-8 mb-3" />
                       <span className="font-semibold">Instagram</span>
                       <span className="text-sm text-muted-foreground">@LaFamilyTour</span>
+                    </a>
+                    
+                    <a 
+                      href="https://www.linkedin.com/in/steve-joseph-mwampale/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex flex-col h-auto p-6 border border-input bg-background hover:bg-blue-50 hover:border-blue-700 hover:text-blue-700 transition-all duration-300 rounded-md items-center justify-center col-span-2"
+                    >
+                      <Linkedin className="w-8 h-8 mb-3" />
+                      <span className="font-semibold">LinkedIn</span>
+                      <span className="text-sm text-muted-foreground">Steve Joseph Mwampale</span>
                     </a>
                   </div>
                   
