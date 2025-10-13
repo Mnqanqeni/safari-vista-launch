@@ -43,9 +43,12 @@ const Contact = () => {
 
       if (result.success) {
         toast({
-          title: "Message sent!",
-          description: "Our team will contact you within 12 hours.",
+          title: "✅ Message Sent Successfully!",
+          description: "Thank you! Our team will contact you within 12 hours.",
         });
+
+        // Show alert for extra confirmation
+        alert("✅ Your message has been sent successfully!\n\nThank you for contacting La Family Tour. Our team will get back to you within 12 hours.");
 
         // Reset form
         setFormData({
